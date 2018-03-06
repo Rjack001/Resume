@@ -1,0 +1,91 @@
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.invites {
+  margin: auto;
+  
+}
+h1.unity {
+  position:absolute;
+  display: inline-block;
+  margin-top: 154;
+  left: 50%;
+  padding: 10px;
+  text-align: center;
+  border: solid;
+  border-width: 2px;
+  border-color: white;
+  color: #F8FBFA;
+}
+.kissingSection {
+  background: url("../Images/kiss.png");
+  height: 1696px;
+  width: 100%;
+  margin: 0px;
+  background-position: center;
+  background-size: cover;
+}
+.whiteRectangle {
+  {
+    border-style: solid;
+    border-width: 20px;
+    border-color: rgb(255, 255, 255);
+    background-color: rgba(59, 88, 154, 0);
+    position: absolute;
+    left: 604px;
+    top: 1324px;
+    width: 671px;
+    height: 671px;
+    z-index: 150;
+  }
+}
+.purpleSection{
+  background-color: rgb(105, 79, 202);
+  height: 1340px;
+  width: 100%;
+  margin: 0px;
+  background-position: center;
+  background-size: cover;
+}
+.greySection{
+  background-color: #FFFFFF;
+  height: 870px;
+  width: 100%;
+  margin: 0px;
+  background-position: center;
+  background-size: cover;
+}
+.buildingSection{
+  background: url("../Images/prototype.psd_0008s_0007_Layer-16.png");
+  height: 897px;
+  width: 100%;
+  margin: 0px;
+  background-position: center;
+  background-size: cover;
+}
+.whiteSection{
+  background-color: #F8FBFA;
+  height: 800px;
+  width: 100%;
+  margin: 0px;
+  background-position: center;
+  background-size: cover;
+}
+.snowSection{
+  background: url("../Images/prototype.psd_0005s_0002s_0000_Layer-18.png");
+  height: 2200px;
+  width: 100%;
+  margin: 0px;
+  background-position: center;
+  background-size: cover;
+}
+.footerSection{
+  background-color: black;
+  height: 800px;
+  width: 100%;
+  margin: 0px;
+  background-position: center;
+  background-size: cover;
+}
