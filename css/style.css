@@ -7,7 +7,7 @@
   margin: auto;
   
 }
-h1.unity {
+h1.unity1 {
   position:absolute;
   display: inline-block;
   margin-top: 154;
@@ -27,20 +27,19 @@ h1.unity {
   background-position: center;
   background-size: cover;
 }
-.whiteRectangle {
-  {
-    border-style: solid;
-    border-width: 20px;
-    border-color: rgb(255, 255, 255);
-    background-color: rgba(59, 88, 154, 0);
-    position: absolute;
-    left: 604px;
-    top: 1324px;
-    width: 671px;
-    height: 671px;
-    z-index: 150;
+.bigSquare1 {
+  position:absolute;
+  display: inline-block;
+  margin-top: 154;
+  left: 50%;
+  padding: 10px;
+  text-align: center;
+  border: solid;
+  border-width: 2px;
+  border-color: white;
+  color: #F8FBFA;
   }
-}
+  
 .purpleSection{
   background-color: rgb(105, 79, 202);
   height: 1340px;
@@ -49,7 +48,8 @@ h1.unity {
   background-position: center;
   background-size: cover;
 }
-.greySection{
+
+.buildingSky{
   background-color: #FFFFFF;
   height: 870px;
   width: 100%;
@@ -65,9 +65,21 @@ h1.unity {
   background-position: center;
   background-size: cover;
 }
+.bigSquare2 {
+  position:absolute;
+  display: inline-block;
+  margin-top: 154;
+  left: 50%;
+  padding: 10px;
+  text-align: center;
+  border: solid;
+  border-width: 2px;
+  border-color: black;
+  color: #F8FBFA;
+}
 .whiteSection{
   background-color: #F8FBFA;
-  height: 800px;
+  height: 1375px;
   width: 100%;
   margin: 0px;
   background-position: center;
@@ -81,6 +93,29 @@ h1.unity {
   background-position: center;
   background-size: cover;
 }
+.bigSquare3 {
+  position:absolute;
+  display: inline-block;
+  margin-top: 154;
+  left: 50%;
+  padding: 10px;
+  text-align: center;
+  border: solid;
+  border-width: 2px;
+  border-color: black;
+}
+h1.unity2 {
+  position:absolute;
+  display: inline-block;
+  margin-top: 154;
+  left: 50%;
+  padding: 10px;
+  text-align: center;
+  border: solid;
+  border-width: 2px;
+  border-color: white;
+  color: #F8FBFA;
+}
 .footerSection{
   background-color: black;
   height: 800px;
@@ -88,4 +123,26 @@ h1.unity {
   margin: 0px;
   background-position: center;
   background-size: cover;
+}
+.phoneNumber {
+  color: white;
+}
+.email {
+  color: white;
+}
+.emailInput {
+  color: white;
+  border: 2px solid grey;
+}
+.fromBlog {
+  padding-top: 0px;
+  padding-bottom: 10px;
+  color: white;
+  vertical-align: text-top;
+}
+.date {
+  color: purple;
+}
+.blogHead {
+  vertical-align: text-top;
 }
