@@ -2,22 +2,10 @@
 *{
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 .invites {
   margin: auto;
-  
-}
-h1.unity1 {
-  position:absolute;
-  display: inline-block;
-  margin-top: 154;
-  left: 50%;
-  padding: 10px;
-  text-align: center;
-  border: solid;
-  border-width: 2px;
-  border-color: white;
-  color: #F8FBFA;
 }
 .kissingSection {
   background: url("../Images/kiss.png");
@@ -27,18 +15,168 @@ h1.unity1 {
   background-position: center;
   background-size: cover;
 }
-.bigSquare1 {
+
+.kissingSection{
+  position: relative;
+  overflow: auto;
+}
+/*this is Alvaro's css*/
+/* .kissingSection {
+width: 100%;
+height: 160vh;
+overflow: auto;
+color: white;
+text-transform: uppercase;
+background-color: black;
+position: relative;
+background-image: url();
+background-position: center center;
+background-repeat: no-repeat;
+} */
+
+.unityNav h1 {
   position:absolute;
-  display: inline-block;
-  margin-top: 154;
-  left: 50%;
+  top: 155px;
+  left: 46%;
   padding: 10px;
   text-align: center;
   border: solid;
-  border-width: 2px;
+  border-width: 5px;
   border-color: white;
   color: #F8FBFA;
-  }
+}
+
+.topMenuBar{
+  width: 80%;
+  margin: 355px auto 25px;
+}
+.topMenuBar  li {
+ display: inline;
+ padding: 20px;
+ text-align: center;
+ margin:50px auto;
+ margin-left: 121px;
+ /* float: left; */
+ /* text-decoration: none; */
+ /* color: white; */
+}
+.topMenuBar li a{
+  text-decoration: none;
+  color: white;
+}
+.phoneLine {
+  position: absolute;
+  top: 0;
+  right: -97px;
+
+  /* float: right; */
+}
+.yellowCircle {
+  right: 42px;
+  top: 118px;
+  position: absolute;
+  border: yellow; 
+}
+.phone {
+  top: 132px;
+  right: 55px;
+  position: absolute;
+  
+}
+.sideNav {
+  /* position: relative; */
+  
+  /* margin-top: 255px;
+  margin-right: 50px; */
+  
+  float: right;
+  transform: rotate(270deg);
+}
+.rotate {
+  transform: rotate(90deg);
+}
+.sideMenu a{
+  margin-right: 0px;
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+}
+
+/* .sideNav {
+  width: 100%;
+  height: auto;
+  font-size: 12px;
+  position: absolute;
+  top: px;
+  left: px;
+  transform: rotate(270deg);
+} */
+
+.sideMenuBar li {
+  text-decoration: none;
+  display: inline-block;
+}
+.honor {
+  /* margin-top: 602px; */
+  text-align: right;
+  margin-right: 41%;
+  margin-top: 242px;
+  color: rgb(255, 168, 0);
+  font-family: "Abraham Lincoln";
+  font-size: 75px;
+  font-weight: normal;
+
+}
+.weBring {
+  /* margin-top: 731px; */
+  text-align: center;
+  margin-right: 1%;
+  margin-top: 242px;
+  color: white;
+  font-family: "Abraham Lincoln";
+  font-weight: lighter;
+  font-size: 40px;
+}
+
+.scrollSquare {
+  right: 49%;
+  top:70%;
+  position: absolute; 
+}
+.scroll {
+  color: white;
+  right: 49%;
+  top:74%;
+  position: absolute;
+}
+.arrowDown {
+  right: 955px;
+  top:76%;
+  position: absolute;
+}
+.sideCopyright {
+  text-transform: rotate(270deg);
+  color: white;
+  display: inline;
+  margin-top: 255px;
+  float: right;
+  transform: rotate(270deg);
+}
+
+.bigSquare1 {
+    height: 702px;
+    width: 702px;
+    position: absolute;
+    display: inline-block;
+    margin-top: -240px;
+    left: 31%;
+    padding: 10px;
+    text-align: center;
+    border: solid;
+    border-width: 21px;
+    border-color: white;
+    color: #F8FBFA;
+}
   
 .purpleSection{
   background-color: rgb(105, 79, 202);
