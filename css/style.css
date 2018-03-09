@@ -2,7 +2,12 @@
 *{
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
+ 
+}
+.wrapper {
+  position: absolute;
+  width: 1920px;
+  left: calc((100vw - 1920px)/2);
 }
 .invites {
   margin: auto;
@@ -35,27 +40,37 @@ background-repeat: no-repeat;
 } */
 
 .unityNav h1 {
-  position:absolute;
+  position: absolute;
   top: 155px;
-  left: 46%;
+  left: 855px;
   padding: 10px;
+  padding-left: 20px;
   text-align: center;
   border: solid;
   border-width: 5px;
   border-color: white;
   color: #F8FBFA;
+  font-family: "Gotham Black";
+  color: rgb(255, 255, 255);
+  letter-spacing: 12px;
+  font-weight: lighter;
 }
 
 .topMenuBar{
   width: 80%;
   margin: 355px auto 25px;
 }
+
 .topMenuBar  li {
- display: inline;
- padding: 20px;
- text-align: center;
- margin:50px auto;
- margin-left: 121px;
+  display: inline;
+  padding: 20px;
+  text-align: center;
+  margin: 50px auto;
+  margin-left: 118px;
+  font-family: "Abraham Lincoln";
+  font-weight: lighter;
+  font-size: 20px;
+  letter-spacing: 4px;
  /* float: left; */
  /* text-decoration: none; */
  /* color: white; */
@@ -111,7 +126,9 @@ background-repeat: no-repeat;
   left: px;
   transform: rotate(270deg);
 } */
+.sideMenu {
 
+}
 .sideMenuBar li {
   text-decoration: none;
   display: inline-block;
@@ -119,11 +136,11 @@ background-repeat: no-repeat;
 .honor {
   /* margin-top: 602px; */
   text-align: right;
-  margin-right: 41%;
-  margin-top: 242px;
+  margin-right: 35%;
+  margin-top: 357px;
   color: rgb(255, 168, 0);
   font-family: "Abraham Lincoln";
-  font-size: 75px;
+  font-size: 100px;
   font-weight: normal;
 
 }
@@ -131,7 +148,7 @@ background-repeat: no-repeat;
   /* margin-top: 731px; */
   text-align: center;
   margin-right: 1%;
-  margin-top: 242px;
+  margin-top: 34px;
   color: white;
   font-family: "Abraham Lincoln";
   font-weight: lighter;
@@ -145,12 +162,15 @@ background-repeat: no-repeat;
 }
 .scroll {
   color: white;
-  right: 49%;
-  top:74%;
+  right: 939px;
+  top: 1250px;
   position: absolute;
+  font-family: "Abraham Lincoln";
+  font-size: 33px;
+  font-weight: lighter;
 }
 .arrowDown {
-  right: 955px;
+  right: 962px;
   top:76%;
   position: absolute;
 }
@@ -176,6 +196,15 @@ background-repeat: no-repeat;
     border-width: 21px;
     border-color: white;
     color: #F8FBFA;
+    z-index: 1;
+}
+.o1 {
+  font-family: "Abraham Lincoln";
+    color: rgb(255, 168, 0);
+    font-size: 356px;
+    font-weight: 200;
+    margin-left: 348px;
+    margin-top: 142px;
 }
   
 .purpleSection{
@@ -185,6 +214,119 @@ background-repeat: no-repeat;
   margin: 0px;
   background-position: center;
   background-size: cover;
+  float: left;
+  position: relative;
+}
+.invites {
+  font-size: 102px;
+  font-family: "Abraham Lincoln";
+  color: white;
+  margin-left: 649px;
+  font-weight: 200;
+  margin-top: -662px;
+}
+.thatsWhy {
+  font-size: 31px;
+  font-family: "Abraham Lincoln";
+  color: white;
+  margin-left: 649px;
+  font-weight: 200;
+  margin-top: -3px;
+}
+.complexity {
+  font-size: 94px;
+  font-family: "Abraham Lincoln";
+  color: white;
+  margin-left: 348px;
+  font-weight: 200;
+  margin-top: 186px;
+}
+.weKnow {
+  font-size: 29px;
+  font-family: "Abraham Lincoln";
+  color: white;
+  margin-left: 697px;
+  font-weight: 200;
+  margin-top: -319px;
+  line-height: 1.5;
+}
+
+.brushBox {
+    position: absolute;
+    right: 12%;
+    top: 12%;
+    height: 452px;
+    z-index: 2;
+}
+.brushBoxShadow {
+  position: absolute;
+  right: 26px;
+  top: 12%;
+  height: 540px;
+  z-index: 1;
+}
+
+.handmadeContainer {
+  position: absolute;
+  left: 354px;
+  top: 968px;
+  color:white;
+  font-family: "Abraham Lincoln";
+  font-weight: lighter;
+  font-size: 27px;
+}
+
+.handmade {
+  color: rgb(255, 168, 0);
+  font-size: 45px;
+  margin-bottom: -18px;
+}
+.handmadeLine {
+  margin-top: 25px;
+  margin-bottom: 17px;
+}
+
+.creativeContainer {
+  position: absolute;
+  left: 838px;
+  top: 968px;
+  color:white;
+  font-family: "Abraham Lincoln";
+  font-weight: lighter;
+  font-size: 27px;
+}
+.creative {
+  color: rgb(255, 168, 0);
+  font-size: 45px;
+  margin-bottom: -18px;
+}
+.creativeLine {
+  margin-top: 25px;
+  margin-bottom: 17px;
+}
+
+.supportContainer {
+  position: absolute;
+  left: 1320px;
+  top: 968px;
+  color:white;
+  font-family: "Abraham Lincoln";
+  font-weight: lighter;
+  font-size: 27px;
+}
+.support {
+  color: rgb(255, 168, 0);
+  font-size: 45px;
+  margin-bottom: -18px;
+}
+.supportLine {
+  margin-top: 25px;
+  margin-bottom: 17px;
+}
+.bottomDashes {
+  position: absolute;
+  left: 899px;
+  top: 1252px;
 }
 
 .buildingSky{
@@ -194,26 +336,101 @@ background-repeat: no-repeat;
   margin: 0px;
   background-position: center;
   background-size: cover;
+  position: relative;
+  top: 1337px;
 }
+.weAreUnity {
+  position: absolute;
+  right: 26px;
+  top: 12%;
+  height: 344px;
+}
+.buildingSky h1 {
+  font-size: 111px;
+  font-family: "Abraham Lincoln";
+  color: black;
+  margin-left: 580px;
+  font-weight: 200;
+  margin-top: 184px;
+  position: absolute;
+}
+.buildingSky p {
+  font-size: 41px;
+  font-family: "Abraham Lincoln";
+  color: black;
+  margin-left: 466px;
+  font-weight: 200;
+  margin-top: 312px;
+  position: absolute;
+  text-align: center;
+}
+.circle1 {
+  position: absolute;
+  right: 841px;
+  top: 51%;
+  border-radius: 50%;
+  border: solid;
+  border-color: #cbc1c1;
+  border-width: 1px;
+  height: 328px;
+  width: 328px;
+}
+
+.circle2 {
+  position: absolute;
+  right: 894px;
+  top: 57%;
+  border-radius: 50%;
+  border: solid;
+  border-color: #cbc1c1;
+  border-width: 1px;
+  height: 222px;
+  width: 222px;
+  background-color: #e5e5e5;
+}
+
+.circle3 {
+  position: absolute;
+  right: 946px;
+  top: 63%;
+  border-radius: 50%;
+  border: solid;
+  border-color: #cbc1c1;
+  border-width: 1px;
+  height: 112px;
+  width: 112px;
+}
+.playButton {
+  position: absolute;
+  right: 988px;
+  top: 67%;
+}
+
 .buildingSection{
-  background: url("../Images/prototype.psd_0008s_0007_Layer-16.png");
+  background: url(../Images/prototype.psd_0008s_0007_Layer-16.png);
   height: 897px;
   width: 100%;
   margin: 0px;
   background-position: center;
   background-size: cover;
+  position: relative;
+  top: 1330px;
+
 }
 .bigSquare2 {
-  position:absolute;
+  height: 566px;
+  width: 566px;
+  position: absolute;
   display: inline-block;
-  margin-top: 154;
-  left: 50%;
+  margin-top: 538px;
+  left: 31.5%;
   padding: 10px;
   text-align: center;
   border: solid;
-  border-width: 2px;
+  border-width: 21px;
   border-color: black;
   color: #F8FBFA;
+  z-index: 1;
 }
 .whiteSection{
   background-color: #F8FBFA;
@@ -222,14 +439,32 @@ background-repeat: no-repeat;
   margin: 0px;
   background-position: center;
   background-size: cover;
+  position: relative;
+  top: 1330px;
+}
+
+.pencilBasket{
+  position: absolute;
+  right: 60%;
+  top: 8%;
+  height: 181px;
+  z-index: 2;
+}
+.pencilBasketShadow {
+  position: absolute;
+  right: 57%;
+  top: 7%;
+  height: 224px;
 }
 .snowSection{
-  background: url("../Images/prototype.psd_0005s_0002s_0000_Layer-18.png");
+  background: url(../Images/prototype.psd_0005s_0002s_0000_Layer-18.png);
   height: 2200px;
   width: 100%;
   margin: 0px;
   background-position: center;
   background-size: cover;
+  position: relative;
+  top: 1325px;
 }
 .bigSquare3 {
   position:absolute;
@@ -261,6 +496,8 @@ h1.unity2 {
   margin: 0px;
   background-position: center;
   background-size: cover;
+  position: relative;
+  top: 1324px;
 }
 .phoneNumber {
   color: white;
