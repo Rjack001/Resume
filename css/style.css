@@ -456,6 +456,42 @@ background-repeat: no-repeat;
   top: 7%;
   height: 224px;
 }
+.blackPencil {
+  position: absolute;
+  right: 59%;
+  top: 21%;
+  height: 88px;
+  z-index: 1;
+}
+.blackPencilShadow {
+  position: absolute;
+  right: 58%;
+  top: 20%;
+  height: 122px;
+}
+.yellowPencil {
+  position: absolute;
+  right: 59%;
+  top: 24%;
+  height: 61px;
+  z-index: 1;
+}
+.yellowPencilShadow {
+  position: absolute;
+  right: 54.5%;
+  top: 22.5%;
+  height: 96px;
+}
+.honorTheDetails {
+  position: absolute;
+  text-transform: uppercase;
+  text-align: right;
+  top: 9%;
+  right: 20%;
+}
+
+
+
 .snowSection{
   background: url(../Images/prototype.psd_0005s_0002s_0000_Layer-18.png);
   height: 2200px;
