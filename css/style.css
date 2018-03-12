@@ -516,7 +516,7 @@ background-repeat: no-repeat;
 }
 .snowSection{
   background: url(../Images/prototype.psd_0005s_0002s_0000_Layer-18.png);
-  height: 2200px;
+  height: 2205px;
   width: 100%;
   margin: 0px;
   background-position: center;
@@ -630,7 +630,104 @@ background-repeat: no-repeat;
   margin-top: 58%;
   position: absolute;
 }
+.global {
+  font-family: "Abraham Lincoln";
+  color: black;
+  margin-left: 0%;
+  margin-top: 52%;
+  position: absolute;
+  text-align: center;
+}
+.global h1 {
+  font-size: 100px;
+  font-weight: 300;
+}
+.global p {
+  font-size: 48px;
+  margin-top: -54px;
+  padding-right: 350px;
+  padding-left: 350px;
+  font-weight: 100;
+  letter-spacing: 5px;
+}
+.verticalBlackLine {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+}
+.whatOur {
+  font-family: "Poppins";
+  font-size: 25px;
+  line-height: 2;
+  color: black;
+  margin-left: 40%;
+  margin-top: 80%;
+  position: absolute;
+  text-align: center;
+}
+.customerFeedBack {
+  width: 74%;
+  position: absolute;
+  top: 75%;
+  left: 11%;
+  color: black;
+  font-family: "Georgia";
+  /* font-size: 19px; */
+  font-weight: 100;
+  height: 25%;
+  text-align: center;
+  border-spacing: 88px;
+  z-index: 2;
+}
+.customerFeedBack .photos {
+  border-bottom: 1px;
+}
+.customerFeedBack .quotes td:nth-child(1) {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.customerFeedBack .quotes td:nth-child(2) {
+  padding-left: 20px;
+  padding-right: 20px;
 
+}
+.customerFeedBack .quotes td:nth-child(3) {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.customerFeedBack .quotes {
+  font-size: 18px;
+  line-height: 33px;
+}
+.person1rectangle {
+  position: absolute;
+  top: 77%;
+  left: 16%;
+  z-index: 1;
+}
+.person2rectangle {
+  position: absolute;
+  top: 77%;
+  left: 39%;
+  z-index: 1;
+}
+.person3rectangle {
+  position: absolute;
+  top: 77%;
+  left: 63%;
+  z-index: 1;
+}
+.moreSnow {
+  background-color: #E4E8EC;
+  height: 284px;
+  width: 100%;
+  margin: 0px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  top: 1308px;
+}
 }
 h1.unity2 {
   position:absolute;
