@@ -82,39 +82,25 @@ background-repeat: no-repeat;
 .phoneLine {
   position: absolute;
   top: 0;
-  right: -97px;
+  right: 82px;
 
   /* float: right; */
 }
 .yellowCircle {
-  right: 42px;
-  top: 118px;
+  right: 60px;
+    top: 279px;
   position: absolute;
   border: yellow; 
 }
 .phone {
-  top: 132px;
-  right: 55px;
+  top: 292px;
+    right: 70px;
   position: absolute;
-  
-}
-.sideNav {
-  /* position: relative; */
-  
-  /* margin-top: 255px;
-  margin-right: 50px; */
-  
-  float: right;
-  transform: rotate(270deg);
-}
-.rotate {
-  transform: rotate(90deg);
 }
 .sideMenu a{
   margin-right: 0px;
   text-decoration: none;
-  color: white;
-  padding: 5px;
+  color: white; 
 }
 
 /* .sideNav {
@@ -126,13 +112,31 @@ background-repeat: no-repeat;
   left: px;
   transform: rotate(270deg);
 } */
-.sideMenu {
 
+.sideMenu {
+  position: absolute;
+    top: 40%;
+    right: -13%;
+    display: inline;
+    padding: 20px;
+    text-align: center;
+    /* margin: 50px auto; */
+    /* margin-left: 118px; */
+    font-family: "Abraham Lincoln";
+    font-weight: lighter;
+    font-size: 16px;
+    letter-spacing: 4px;
+    /* display: inline; */
+    width: 633px;
+    transform: rotate(270deg);
+    word-spacing: 73px;
 }
-.sideMenuBar li {
+
+.sideMenu li {
   text-decoration: none;
   display: inline-block;
 }
+
 .honor {
   /* margin-top: 602px; */
   text-align: right;
@@ -175,11 +179,11 @@ background-repeat: no-repeat;
   position: absolute;
 }
 .sideCopyright {
-  text-transform: rotate(270deg);
+  position: absolute;
   color: white;
   display: inline;
-  margin-top: 255px;
-  float: right;
+  top: 85%;
+  right: -2%;
   transform: rotate(270deg);
 }
 
@@ -665,6 +669,10 @@ background-repeat: no-repeat;
   position: absolute;
   text-align: center;
 }
+/* the following commented out blocks are
+for the customer feedback table in html.
+*/
+/*
 .customerFeedBack {
   width: 74%;
   position: absolute;
@@ -672,7 +680,6 @@ background-repeat: no-repeat;
   left: 11%;
   color: black;
   font-family: "Georgia";
-  /* font-size: 19px; */
   font-weight: 100;
   height: 25%;
   text-align: center;
@@ -681,6 +688,9 @@ background-repeat: no-repeat;
 }
 .customerFeedBack .photos {
   border-bottom: 1px;
+}
+.customerFeedBack .stars {
+  margin-top: 1px;
 }
 .customerFeedBack .quotes td:nth-child(1) {
   padding-left: 20px;
@@ -700,13 +710,190 @@ background-repeat: no-repeat;
   font-size: 18px;
   line-height: 33px;
 }
+*/
+.person1 {
+  position: relative;
+  /* top: 73%; */
+  left: 21%;
+  color: black;
+  font-family: "Georgia";
+  font-weight: 100;
+  height: 25%;
+  text-align: center;
+  /* border-spacing: 88px; */
+  z-index: 2;
+  width: 259px;
+}
+.person1 .person1image {
+  position: absolute;
+  margin-top: 671%;
+  left: 7%;
+}
+.person1 .person1stars {
+  position: absolute;
+  margin-top: 743%;
+  left: 12%;
+}
+
+.person1 q {
+  position: absolute;
+  margin-top: 764%;
+  left: -33%;
+  font-size: 18px;
+  line-height: 33px;
+}
+.person1 .name1 {
+  position: absolute;
+  top: 385%;
+  left: -4%;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 33px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.person1 .location1 {
+  position: absolute;
+  top: 391%;
+  left: 8%;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 33px;
+  letter-spacing: 2px;
+  color: grey;
+  text-transform: uppercase;
+}
 .person1rectangle {
   position: absolute;
   top: 77%;
   left: 16%;
   z-index: 1;
 }
+.person2 {
+  position: relative;
+  /* top: 73%; */
+  left: 21%;
+  color: black;
+  font-family: "Georgia";
+  font-weight: 100;
+  height: 25%;
+  text-align: center;
+  /* border-spacing: 88px; */
+  z-index: 2;
+  width: 259px;
+}
+.person2 .person2image {
+  position: absolute;
+  margin-top: 452%;
+  left: 183%;
+}
+.person2 .person2stars {
+  position: absolute;
+  margin-top: 523%;
+  left: 189%;
+}
+
+.person2 q {
+  position: absolute;
+    margin-top: 544%;
+    left: -33%;
+    margin-left: 188%;
+    font-size: 18px;
+    line-height: 33px;
+    width: 296px;
+    color: white;
+}
+.person2 .name2 {
+  position: absolute;
+  top: 282%;
+  left: 172%;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 33px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  width: 198px;
+  color: rgb(255, 168, 0);
+}
+.person2 .location2 {
+  position: absolute;
+  top: 288%;
+  left: 172%;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 33px;
+  letter-spacing: 2px;
+  color: grey;
+  text-transform: uppercase;
+  width: 198px;
+  color: rgb(255, 168, 0);
+}
 .person2rectangle {
+  position: absolute;
+  top: 77%;
+  left: 39%;
+  z-index: 1;
+}
+
+.person3 {
+  position: relative;
+  /* top: 73%; */
+  left: 45%;
+  color: black;
+  font-family: "Georgia";
+  font-weight: 100;
+  height: 23%;
+  text-align: center;
+  /* border-spacing: 88px; */
+  z-index: 2;
+  width: 259px;
+}
+.person3 .person3image {
+  position: absolute;
+  margin-top: 242%;
+  left: 183%;
+}
+.person3 .person3stars {
+  position: absolute;
+  margin-top: 313%;
+  left: 189%;
+}
+
+.person3 q {
+  position: absolute;
+  margin-top: 331%;
+  left: -33%;
+  margin-left: 178%;
+  font-size: 18px;
+  line-height: 33px;
+  width: 313px;
+
+}
+.person3 .name3 {
+  position: absolute;
+  top: 198%;
+  left: 151%;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 33px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  width: 279px;
+  
+}
+.person3 .location3 {
+  position: absolute;
+  top: 205%;
+  left: 167%;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 33px;
+  letter-spacing: 2px;
+  color: grey;
+  text-transform: uppercase;
+  width: 198px;
+}
+.person3rectangle {
   position: absolute;
   top: 77%;
   left: 39%;
@@ -728,44 +915,161 @@ background-repeat: no-repeat;
   position: relative;
   top: 1308px;
 }
-}
-h1.unity2 {
-  position:absolute;
-  display: inline-block;
-  margin-top: 154;
-  left: 50%;
-  padding: 10px;
-  text-align: center;
-  border: solid;
-  border-width: 2px;
-  border-color: white;
-  color: #F8FBFA;
-}
+
 .footerSection{
   background-color: black;
-  height: 800px;
+  height: 774px;
   width: 100%;
   margin: 0px;
   background-position: center;
   background-size: cover;
   position: relative;
-  top: 1324px;
+  top: 1316px;
+}
+.phoneImage {
+  position: absolute;
+    right: 86.5%;
+    top: 5%;
+    height: 27px;
+    z-index: 1;
+    transform: scaleX(-1);
 }
 .phoneNumber {
+  font-family: "Roboto-Regular";
+  position: absolute;
   color: white;
+  right: 74%;
+  top: 5.5%;
+  height: 21px;
+  z-index: 1;
+  letter-spacing: 2px;
+}
+.unity2 {
+  
+  position: absolute;
+  top: 13px;
+  left: 855px;
+  padding: 10px;
+  padding-left: 20px;
+  text-align: center;
+  border: solid;
+  border-width: 5px;
+  border-color: white;
+  font-family: "Gotham Black";
+  color: rgb(255, 255, 255);
+  letter-spacing: 12px;
+  font-weight: lighter;
 }
 .email {
+  font-family: "Roboto-Regular";
+  position: absolute;
   color: white;
+  right: 14%;
+  top: 5.5%;
+  height: 21px;
+  z-index: 1;
+  letter-spacing: 2px;
+}
+.envelope {
+  position: absolute;
+    right: 27%;
+    top: 5%;
+    height: 21px;
+    z-index: 1;
+}
+.aboutUs {
+  font-family: "Roboto-Regular";
+    color: white;
+    position: absolute;
+    right: 82%;
+    top: 23%;
+    letter-spacing: 2px;
+}
+.girlOnline {
+  position: absolute;
+  top: 30%;
+  left: 13%;
+}
+.aboutUsArticle{
+  position: absolute;
+  color: rgb(153, 153, 153);
+  font-family: "Roboto-Regular";
+  top: 29%;
+  right: 54%;
+  z-index: 1;
+  width: 440px;
+  letter-spacing: 2px;
+  line-height: 29px;
+  font-size: 12px;
+}
+.socialMedia {
+  position: absolute;
+    top: 47%;
+    left: 23%;
+    height: 38px;
+}
+.newsletter {
+  font-family: "Roboto-Regular";
+    color: white;
+    position: absolute;
+    right: 43%;
+    top: 23%;
+    letter-spacing: 2px;
+}
+.newsletterP {
+  position: absolute;
+    color: rgb(153, 153, 153);
+    font-family: "Roboto-Regular";
+    top: 29%;
+    right: 37%;
+    z-index: 1;
+    width: 244px;
+    letter-spacing: 2px;
+    line-height: 29px;
+    font-size: 12px;
+}
 }
 .emailInput {
-  color: white;
-  border: 2px solid grey;
+  position: absolute;
+  top: 41%;
+  left: 50.5%;
+  padding: 10px;
+  padding-left: 20px;
+  border: solid;
+  border-width: 1px;
+  border-color: grey;
+  font-family: "Roboto-Regular";
+  color: grey;
+  letter-spacing: 2px;
+  font-weight: lighter;
+  width: 272px;
+  z-index: 1;
 }
-.fromBlog {
-  padding-top: 0px;
-  padding-bottom: 10px;
+.subscribe {
+  background-color: purple;
   color: white;
-  vertical-align: text-top;
+  position: absolute;
+  right: 42.7%;
+  top: 50%;
+  letter-spacing: 2px;
+  font-family: "Roboto-Regular";
+  height: 30px;
+  width: 129px;
+  text-align: center;
+  padding-top: 14px;
+}
+
+.fromBlog {
+  width: 15%;
+    position: absolute;
+    top: 24%;
+    left: 65%;
+    color: white;
+    font-family: "Roboto-Regular";
+    font-size: 12px;
+    font-weight: 100;
+    height: 33%;
+    vertical-align: text-top;
 }
 .date {
   color: purple;
