@@ -9,11 +9,7 @@
 } */
 /* wrapper with 1920 & centering calc to lock image in for
     different size monitors */
-.wrapper {
-  position: absolute;
-  width: 1920px;
-  left: calc((100vw - 1920px)/2);
-}
+
 .invites {
   margin: auto;
 }
@@ -303,7 +299,7 @@
   color: rgb(255, 168, 0);
   font-size: 45px;
   margin-bottom: -18px;
-  margin-top: 18px;
+  margin-top: 8px;
 }
 .supportContainer img :nth-child(3) {
   margin-top: 25px;
