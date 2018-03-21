@@ -1,0 +1,75 @@
+
+.page-1 {
+    font-family: "OpenSans-Regular";
+}
+
+.header-bar {
+    background:rgb(54, 54, 54); 
+    font-size: 30px;
+    
+}
+/* 
+ul {
+    margin-top: 20px;
+    list-style-type: none;
+
+}
+.contact li img {
+    height: 30px;
+
+}
+.nav li {
+    display: inline;
+    padding: 2px 40px;
+}
+a {
+    color: gray;
+}
+.contact li {
+    display: inline;
+    padding: 4px 40px;
+    word-spacing: 2px;   
+}
+.contact {
+   margin-left: 1%;
+}
+select {
+    text-decoration: none;
+    background-color: rgb(54, 54, 54);
+    color: gray;
+} */
+
+.title {
+    text-transform: uppercase;
+    text-align: center;
+    background: white;
+    letter-spacing: 50px;
+      
+}
+.title p {
+    margin-left: 35%;
+
+}
+.title img {
+    height: 50%;
+    margin-top: 2%;
+    margin-left: 30%;
+}
+/* .nav select {
+    border: none;
+}
+
+
+.media-block {
+    border: solid 1px gray;
+    padding: 4px;
+}
+.contact ul {
+    padding: 4px;
+} */
+.center-section {
+    background-color: black;
+}
+.carousel-item {
+    color: white;
+}
