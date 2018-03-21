@@ -8,7 +8,7 @@
     font-size: 30px;
     
 }
-/* 
+
 ul {
     margin-top: 20px;
     list-style-type: none;
@@ -37,7 +37,7 @@ select {
     text-decoration: none;
     background-color: rgb(54, 54, 54);
     color: gray;
-} */
+}
 
 .title {
     text-transform: uppercase;
@@ -55,7 +55,7 @@ select {
     margin-top: 2%;
     margin-left: 30%;
 }
-/* .nav select {
+.nav select {
     border: none;
 }
 
@@ -66,7 +66,7 @@ select {
 }
 .contact ul {
     padding: 4px;
-} */
+}
 .center-section {
     background-color: black;
 }
