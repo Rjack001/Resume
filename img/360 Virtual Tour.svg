@@ -1,0 +1,67 @@
+<svg id="_360_Virtual_Tour" data-name="360 Virtual Tour" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="123" viewBox="0 0 160 123">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        opacity: 0.9;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+
+      .cls-3 {
+        font-size: 15px;
+        filter: url(#filter-2);
+        font-family: "Open Sans";
+      }
+    </style>
+    <filter id="filter" x="1420" y="554" width="94" height="43" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="1" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="1"/>
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+      <feFlood result="flood-2" flood-color="#8d8d8d"/>
+      <feComposite result="composite-2" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend-2" in2="blend"/>
+    </filter>
+    <filter id="filter-2" x="17" y="16" width="116" height="12" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#757575"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect class="cls-1" width="160" height="123"/>
+  <path id="Şekil_2_kopya" data-name="Şekil 2 kopya" class="cls-2" d="M1512.01,554.01l-2.57.743c-0.15.045-15.7,4.452-43.03,4.452s-42.69-4.4-42.84-4.451l-2.58-.744v39.981l2.5-.624c0.18-.048,18.15-4.47,42.92-4.47a200.088,200.088,0,0,1,43.11,4.471l2.49,0.616V554.01Zm-4.02,34.888c-3.3-.691-9.68-1.88-18.22-2.789l-2.99-4.731h2.91l-5.82-9.99-5.82,9.99h2.67l-2.41,3.814c-1.6-.085-3.25-0.158-4.95-0.209l-3.33-5.275h3.82l-7.64-13.113-7.63,13.113h3.51l-3.35,5.3c-1.62.056-3.2,0.131-4.74,0.216l-2.42-3.844h2.9l-5.81-9.99-5.82,9.989h2.67l-3.03,4.8c-8.18.9-14.28,2.043-17.48,2.718V559.271c5.5,1.277,19.63,3.957,41.4,3.957,21.8,0,36.05-2.688,41.58-3.963V588.9h0v0Zm-11.46-23.55a4.028,4.028,0,1,1-4.02,4.027A4.026,4.026,0,0,1,1496.53,565.348Z" transform="translate(-1386 -498)"/>
+  <text id="_360_Virtual_Tour-2" data-name="360 Virtual Tour" class="cls-3" x="16.687" y="27.812">360 Virtual Tour</text>
+</svg>

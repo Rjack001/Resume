@@ -1,0 +1,73 @@
+<svg id="Weather" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="200" viewBox="0 0 160 200">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1 {
+        fill: #fccb8d;
+        opacity: 0.9;
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        font-size: 30px;
+        font-weight: 600;
+      }
+
+      .cls-2, .cls-4, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-4 {
+        font-family: "Open Sans";
+      }
+
+      .cls-3 {
+        font-size: 16px;
+      }
+
+      .cls-4 {
+        font-size: 15px;
+      }
+
+      .cls-5 {
+        fill-rule: evenodd;
+      }
+    </style>
+    <filter id="filter" x="0" y="0" width="160" height="200" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="0" y="0" width="160" height="200" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDE2MCAyMDAiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50KTsKICAgICAgfQogICAgPC9zdHlsZT4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50IiB4MT0iMTYwIiB5MT0iMTkyLjAyOSIgeDI9IjAiIHkyPSI3Ljk3MSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9Ii0wLjI1IiBzdG9wLWNvbG9yPSIjZmZmNWFhIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMS4yNSIgc3RvcC1jb2xvcj0iI2ZmYTgwMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIwMCIvPgo8L3N2Zz4K"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect class="cls-1" width="160" height="200"/>
+  <text id="_26_19_Sunny" data-name="26°/19° Sunny" class="cls-2" x="16.687" y="157.811">26°/19°<tspan class="cls-3" x="16.687" dy="19.2">Sunny</tspan></text>
+  <text id="Greece" class="cls-4" x="16.687" y="27.812">Greece</text>
+  <path id="sunny" class="cls-5" d="M1457.07,212.06l-2.93,1.214,2.02,4.884a28.779,28.779,0,0,1,2.94-1.21l-2.03-4.888h0Zm-11.69,7.072-2.25,2.243,3.75,3.744a28.051,28.051,0,0,1,2.24-2.243l-3.74-3.744h0Zm-6.08,24.282H1434v3.172h5.3c-0.03-.525-0.05-1.054-0.05-1.586s0.02-1.061.05-1.586h0Zm-2.03-13.272-1.21,2.931,4.89,2.025a27.55,27.55,0,0,1,1.21-2.933l-4.89-2.023h0Zm55.35-11.01-3.74,3.744a28.051,28.051,0,0,1,2.24,2.243l3.75-3.744-2.25-2.243h0Zm-11.69-7.072-2.03,4.888a28.779,28.779,0,0,1,2.94,1.21l2.02-4.884-2.93-1.214h0ZM1470.59,210h-3.18V215.3q0.795-.042,1.59-0.043t1.59,0.043V210h0Zm30.14,20.139-4.89,2.023a27.55,27.55,0,0,1,1.21,2.933l4.89-2.025-1.21-2.931h0ZM1440.95,254.9l-4.89,2.024,1.21,2.931,4.89-2.023a27.62,27.62,0,0,1-1.21-2.932h0Zm56.1,0a27.62,27.62,0,0,1-1.21,2.932l4.89,2.024,1.21-2.932-4.89-2.024h0Zm-5.93,9.978a28.217,28.217,0,0,1-2.24,2.243l3.74,3.744,2.25-2.243-3.75-3.744h0ZM1504,243.414h-5.3c0.03,0.525.05,1.054,0.05,1.586s-0.02,1.061-.05,1.586h5.3v-3.172h0Zm-22.16,28.428a29.008,29.008,0,0,1-2.94,1.21l2.03,4.888,2.93-1.214-2.02-4.884h0Zm-34.96-6.961-3.75,3.744,2.25,2.243,3.74-3.744a28.217,28.217,0,0,1-2.24-2.243h0Zm9.28,6.961-2.02,4.884,2.93,1.214,2.03-4.888a29.008,29.008,0,0,1-2.94-1.21h0Zm14.43,2.862q-0.795.042-1.59,0.043t-1.59-.043V280h3.18V274.7h0ZM1469,221.592A23.408,23.408,0,1,1,1445.59,245,23.435,23.435,0,0,1,1469,221.592m0-2.84A26.248,26.248,0,1,0,1495.25,245,26.248,26.248,0,0,0,1469,218.752h0Z" transform="translate(-1386 -167)"/>
+</svg>
