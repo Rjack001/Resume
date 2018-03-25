@@ -25,13 +25,10 @@
     margin-left: 30%;
 }
 
-.center-section {
+.jumbotron {
     background-color: rgb(49, 49, 49);
 }
 
-.carousel-item {
-    color: white;
-}
 .current-info {
     padding-top:20px;
     padding-bottom: 20px;
@@ -46,7 +43,14 @@
 .navbar-nav > li{
     padding-left:50px;
     padding-right:50px;
+    font-size: 20px;
   }
+   
+.availability-navbar > li {
+    padding-left:50px;
+    padding-right:50px;
+  }
+
 .social-media img {
     height: 30px;
     padding: 0px 10px;
@@ -71,4 +75,13 @@
   input .input-calendar [type='text'] {
     background: white url(img/calendar.svg) no-repeat ;
   }
+  .navbar-availability {
+      margin-bottom: 50px;
+      margin-left: 20px;
+      margin-right: 20px;
+  }
+  .hotel-tab {
+      margin-left: 5px;
+  }
+  
 

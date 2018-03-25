@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fontello.css">
 </head>
 <body>
     <div class="page-1 container-fluid">
@@ -109,7 +110,7 @@
                 </div>
             
             </header>
-            <section class="center-section">
+            <section class="jumbotron">
                 <div class="current-info row">
                     <div class="deal col-md-10">
                         <h3>35% Sale</h3>
@@ -129,88 +130,301 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="card text-center border-0">
+                        <div class="card-header bg-dark">
+                          <ul class="nav nav-tabs card-header-tabs">
+                            <li class="nav-item">
+                              <a class="nav-link active" href="#"><img src="img/hotel.svg" alt=""> Active</a>
+                            </li>
+                          </ul>
+                        </div>
+                        
+                        <div class="row availability-navbar">
+                                <div class="col-md-12">
+                                    <nav class="navbar-availability navbar navbar-expand-lg navbar-light bg-light">
+                                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                            <span class="navbar-toggler-icon"></span>
+                                        </button>
+                                        
+                                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                            <ul class="navbar-nav mr-auto">
+                                                <li class="nav-item active">
+                                                    <div class="form-group">
+                                                        <label>Arrival</label>
+                                                        <input type="text" class="form-control input-calendar" placeholder="16.07.2015">
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <div class="form-group">
+                                                        <label>Going</label>
+                                                        <input type="text" class="form-control" placeholder="28.07.2016">
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item dropdown">
+                                                    <div class="form-group">
+                                                        <label>Rooms</label> <br>
+                                                        <select class="bg-light selectpicker">
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                        </select>
+                                                    </div>
+                                                    
+                                                </li>
+                                                <li class="nav-item">
+                                                    <div class="form-group">
+                                                        <label>Person</label> <br>
+                                                        <select class="bg-light selectpicker">
+                                                                <option>Yes</option>
+                                                                <option>No</option>
+                                                                <option>Maybe....</option>
+                                                        </select>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item dropdown">
+                                                    <div class="form-group">
+                                                        <label>Child</label> <br>
+                                                        <select class="bg-light selectpicker">
+                                                                <option>Yes</option>
+                                                                <option>No</option>
+                                                                <option>Sometimes :)</option>
+                                                        </select>
+                                                    </div>
+                                                    
+                                                </li>
+                                                <li class="nav-item">
+                                                    <div class="form-group">
+                                                        <label>Day</label> <br>
+                                                        <select class="bg-light selectpicker">
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                        </select>
+                                                    </div>
+                                                </li>
+                                             </ul>
+                                            <button class="btn btn-dark">Search Book</button>
+                                           
+                                        </div>
+                                    </nav>
+                                    
+                                </div>
+                      </div>
                 <!-- using a button for hotel tab -->
-                <div class="row hotel-tab">
+                <!-- <div class="row hotel-tab">
                     <div class="col-md-12">
                         <button class="btn-lg bg-light rounded-0"><img src="img/hotel.svg" alt=""> <h3 class="float-right"> Hotel</h3></button>
                     </div>
-<!-- hotel availability navbar -->
-                </div>
-                <div class="row">
+                </div> -->
+         <!-- hotel availability navbar -->       
+                <!-- <div class="row availability-navbar">
                         <div class="col-md-12">
-                                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                          <span class="navbar-toggler-icon"></span>
-                                        </button>
-                                      
-                                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                          <ul class="navbar-nav mr-auto">
-                                            <li class="nav-item active">
-                                                <div class="form-group">
-                                                    <label>Arrival</label>
-                                                    <input type="text" class="form-control input-calendar" placeholder="16.07.2015">
-                                                </div>
-                                            </li>
-                                            <li class="nav-item">
-                                                <div class="form-group">
-                                                    <label>Going</label>
-                                                    <input type="text" class="form-control" placeholder="28.07.2016">
-                                                </div>
-                                            </li>
-                                            <li class="nav-item dropdown">
-                                                <div class="form-group">
-                                                    <label>Rooms</label> <br>
-                                                    <select class="bg-light selectpicker">
-                                                            <option>1</option>
-                                                            <option>2</option>
-                                                            <option>3</option>
-                                                    </select>
-                                                </div>
-                                              
-                                            </li>
-                                            <li class="nav-item">
-                                                <div class="form-group">
-                                                    <label>Person</label> <br>
-                                                    <select class="bg-light selectpicker">
-                                                            <option>Yes</option>
-                                                            <option>No</option>
-                                                            <option>Maybe....</option>
-                                                    </select>
-                                                </div>
-                                            </li>
-                                            <li class="nav-item dropdown">
-                                                <div class="form-group">
-                                                    <label>Child</label> <br>
-                                                    <select class="bg-light selectpicker">
-                                                            <option>Yes</option>
-                                                            <option>No</option>
-                                                            <option>Sometimes :)</option>
-                                                    </select>
-                                                </div>
-                                                
-                                            </li>
-                                            <li class="nav-item">
-                                                <div class="form-group">
-                                                    <label>Day</label> <br>
-                                                    <select class="bg-light selectpicker">
-                                                            <option>1</option>
-                                                            <option>2</option>
-                                                            <option>3</option>
-                                                    </select>
-                                                </div>
-                                            </li>
-                                          </ul>
-                                          <form class="form-inline my-2 my-lg-0">
-                                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                                          </form>
-                                        </div>
-                                      </nav>
+                            <nav class="navbar-availability navbar navbar-expand-lg navbar-light bg-light">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul class="navbar-nav mr-auto">
+                                        <li class="nav-item active">
+                                            <div class="form-group">
+                                                <label>Arrival</label>
+                                                <input type="text" class="form-control input-calendar" placeholder="16.07.2015">
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <div class="form-group">
+                                                <label>Going</label>
+                                                <input type="text" class="form-control" placeholder="28.07.2016">
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <div class="form-group">
+                                                <label>Rooms</label> <br>
+                                                <select class="bg-light selectpicker">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                </select>
+                                            </div>
+                                            
+                                        </li>
+                                        <li class="nav-item">
+                                            <div class="form-group">
+                                                <label>Person</label> <br>
+                                                <select class="bg-light selectpicker">
+                                                        <option>Yes</option>
+                                                        <option>No</option>
+                                                        <option>Maybe....</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <div class="form-group">
+                                                <label>Child</label> <br>
+                                                <select class="bg-light selectpicker">
+                                                        <option>Yes</option>
+                                                        <option>No</option>
+                                                        <option>Sometimes :)</option>
+                                                </select>
+                                            </div>
+                                            
+                                        </li>
+                                        <li class="nav-item">
+                                            <div class="form-group">
+                                                <label>Day</label> <br>
+                                                <select class="bg-light selectpicker">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                     </ul>
+                                    <button class="btn btn-dark">Search Book</button>
+                                   
+                                </div>
+                            </nav>
                             
                         </div>
     
-                    </div> 
+                    </div>  -->
+        <!-- end of availability-navbar -->
+            </section>
+            <section class="light-section">
+                    <div class="row above-about-hotel-cards" >
+                        <div class="col-md-3">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="img/luggage.svg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h3>Amazing Travel</h3>
+                                    <p class="card-text">Nam liber tempor cum soluta nobis <br>
+                                                        eleifend option congue nihil imperdiet <br>
+                                                        doming id quod mazim.</p>
+                                    <a href="javascript:void(0)">Read More <img src="img/arrow.svg" alt=""></a>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="img/map.svg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h3>Discover</h3>
+                                    <p class="card-text">Nam liber tempor cum soluta nobis <br>
+                                        eleifend option congue nihil imperdiet <br>
+                                        doming id quod mazim.</p>
+                                    <a href="javascript:void(0)">Read More <img src="img/arrow.svg" alt=""></a>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="img/earth.svg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h3>Book Your Trip</h3>    
+                                    <p class="card-text">Nam liber tempor cum soluta nobis <br>
+                                            eleifend option congue nihil imperdiet <br>
+                                            doming id quod mazim.</p>
+                                     <a href="javascript:void(0)">Read More <img src="img/arrow.svg" alt=""></a>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="img/comments.svg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h3>Nice Support</h3>   
+                                    <p class="card-text">Nam liber tempor cum soluta nobis <br>
+                                            eleifend option congue nihil imperdiet <br>
+                                            doming id quod mazim.</p>
+                                     <a href="javascript:void(0)">Read More <img src="img/arrow.svg" alt=""></a>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>About Hotel</h2>
+                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br>
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="img/comments.svg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h3>Nice Support</h3>   
+                                    <p class="card-text">Nam liber tempor cum soluta nobis <br>
+                                            eleifend option congue nihil imperdiet <br>
+                                            doming id quod mazim.</p>
+                                     <a href="javascript:void(0)">Read More <img src="img/arrow.svg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="img/comments.svg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h3>Nice Support</h3>   
+                                    <p class="card-text">Nam liber tempor cum soluta nobis <br>
+                                            eleifend option congue nihil imperdiet <br>
+                                            doming id quod mazim.</p>
+                                     <a href="javascript:void(0)">Read More <img src="img/arrow.svg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="img/comments.svg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h3>Nice Support</h3>   
+                                    <p class="card-text">Nam liber tempor cum soluta nobis <br>
+                                            eleifend option congue nihil imperdiet <br>
+                                            doming id quod mazim.</p>
+                                     <a href="javascript:void(0)">Read More <img src="img/arrow.svg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-4">
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="img/comments.svg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h3>Nice Support</h3>   
+                                        <p class="card-text">Nam liber tempor cum soluta nobis <br>
+                                                eleifend option congue nihil imperdiet <br>
+                                                doming id quod mazim.</p>
+                                         <a href="javascript:void(0)">Read More <img src="img/arrow.svg" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="img/comments.svg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h3>Nice Support</h3>   
+                                        <p class="card-text">Nam liber tempor cum soluta nobis <br>
+                                                eleifend option congue nihil imperdiet <br>
+                                                doming id quod mazim.</p>
+                                         <a href="javascript:void(0)">Read More <img src="img/arrow.svg" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="img/comments.svg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h3>Nice Support</h3>   
+                                        <p class="card-text">Nam liber tempor cum soluta nobis <br>
+                                                eleifend option congue nihil imperdiet <br>
+                                                doming id quod mazim.</p>
+                                         <a href="javascript:void(0)">Read More <img src="img/arrow.svg" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
             </section>
 
             <footer>
