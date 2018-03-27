@@ -1,6 +1,6 @@
 
 .page-1 {
-    font-family: "OpenSans-Regular"; 
+    font-family: "Open Sans"; 
 }
 
 .header-bar {
@@ -27,8 +27,21 @@
 
 .jumbotron {
     background-color: rgb(49, 49, 49);
+    font-family: "Open Sans";
 }
-
+.jumbotron button {
+    padding: 20px 30px;
+}
+.deal h3 {
+    font-size: 60px;
+}
+.deal h1 {
+    font-size: 75px;
+    font-family: "Open Sans";
+}
+.card-header {
+    background-color: #313131;
+}
 .current-info {
     padding-top:20px;
     padding-bottom: 20px;
@@ -41,9 +54,12 @@
     margin-top: 15px;
 }
 .navbar-nav > li{
-    padding-left:50px;
-    padding-right:50px;
+    padding-left:75px;
+    padding-right:75px;
     font-size: 20px;
+  }
+  .nav-link { 
+      word-spacing: 5px;
   }
    
 .availability-navbar > li {
@@ -53,35 +69,46 @@
 
 .social-media img {
     height: 30px;
-    padding: 0px 10px;
+    padding: 1px 10px;
     margin-top: 15px;
-  }
-  .weather :nth-child(2) {
-      margin-top: 10px;
-      margin-bottom: 10px;
-  }
-  .hotel-tab button {
-      border-radius: 0;
-      background-image: none;
+    z-index: 5;
+}
+.above-about-hotel-cards .top-image {
+    height: 50px;
+}
+.above-about-hotel-cards {
+    text-align: center;
+}
+
+.about-hotel {
+    text-align: center;
+}
+.weather :nth-child(2) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.hotel-tab button {
+    border-radius: 0;
+    background-image: none;
     outline: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
-  }
+}
 
-  .hotel-tab img {
+.hotel-tab img {
     margin-right: 15px;
     border: white;
-  }
-  input .input-calendar [type='text'] {
+}
+input .input-calendar [type='text'] {
     background: white url(img/calendar.svg) no-repeat ;
-  }
-  .navbar-availability {
-      margin-bottom: 50px;
-      margin-left: 20px;
-      margin-right: 20px;
-  }
-  .hotel-tab {
-      margin-left: 5px;
-  }
+}
+.navbar-availability {
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.hotel-tab {
+    margin-left: 5px;
+}
   
 

@@ -11,6 +11,7 @@
 </head>
 <body>
     <div class="page-1 container-fluid">
+<!--Hotel logo  -->
             <header >
                 <div class="row header-bar bg-dark">
                     <div class="col-md-3 title">
@@ -18,10 +19,9 @@
                         <p>hotel</p>
                     </div>
 
-
+<!-- Top of page contact & log in bar  -->
                     <div class="col-md-9 nav-contact">
                             <nav class="navbar navbar-expand-lg navbar-light">
-                                <a class="navbar-brand" href="#"></a>
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
                                 </button>
@@ -49,7 +49,7 @@
                                                 <select class="bg-dark selectpicker">
                                                         <option>EN</option>
                                                         <option>ES</option>
-                                                        <option>FR</option>
+                                                        <option>FRENCH</option>
                                                 </select>
                                                       
                                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -58,7 +58,7 @@
                                                 <div class="dropdown-divider"></div>
                                                 <a class="dropdown-item" href="#">Something else here</a>
                                                 </div>
-                                            </li>
+                                        </li>
                                         <li class="social-media nav-item">
                                             <a class="" href="#"><img src="img/facebook.png" alt=""></a>
                                             <a class="" href="#"><img src="img/twitter.png" alt=""></a>
@@ -69,7 +69,7 @@
                                 </div>
                             </nav>
 
-
+<!-- Top of page navbar -->
                             <nav class="nav1 navbar navbar-expand-lg navbar-light ">
                                 <a class="navbar-brand" href="#"></a>
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,11 +83,22 @@
                                             <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">Link</a>
+                                            <a class="nav-link" href="#">About Us</a>
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Dropdown
+                                            Services
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Products
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <a class="dropdown-item" href="#">Action</a>
@@ -97,27 +108,30 @@
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link disabled" href="#">Disabled</a>
+                                            <a class="nav-link" href="#">Gallery</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Contact</a>
                                         </li>
                                     </ul>
-                                    <form class="form-inline my-2 my-lg-0">
-                                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                                    </form>
+                                    <img src="img/search.svg" alt="">
                                 </div>
                             </nav>
                     </div>
                 </div>
-            
             </header>
+<!-- end of navbars -->
+
+<!-- beginning of jumbotron section. Want to change to carousel if time allows -->
             <section class="jumbotron">
                 <div class="current-info row">
-                    <div class="deal col-md-10">
-                        <h3>35% Sale</h3>
-                        <h1>YOU ENTER SUMMER WITH <br>REFRESHING RATES</h1>
-                        <button>EXPLORE IT</button>
-                        <img src="img/Slides Steps.svg" alt="">
+                    <div class="my-5 deal col-md-10">
+                        <h3 class="my-2">35% Sale</h3>
+                        <h1 class="my-2">YOU ENTER SUMMER WITH <br>REFRESHING RATES</h1>
+                        <button type="button" class="btn btn-light my-5 radius-0 btn-xl"><strong>EXPLORE IT</strong> </button>
+                        <img class="my-5 d-block" src="img/Slides Steps.svg" alt="">
                     </div>
+                    
                     <div class="weather col-md-2">
                         <div class="card" style="width: 18rem;">
                                 <img class="card-img-top" src="img/weather.svg" alt="Card image cap">
@@ -130,15 +144,17 @@
                         </div>
                     </div>
                 </div>
+
+ <!-- Hotel availability search bar. -->
+
                 <div class="card text-center border-0">
-                        <div class="card-header bg-dark">
+                        <div class="card-header ">
                           <ul class="nav nav-tabs card-header-tabs">
                             <li class="nav-item">
                               <a class="nav-link active" href="#"><img src="img/hotel.svg" alt=""> Active</a>
                             </li>
                           </ul>
                         </div>
-                        
                         <div class="row availability-navbar">
                                 <div class="col-md-12">
                                     <nav class="navbar-availability navbar navbar-expand-lg navbar-light bg-light">
@@ -166,7 +182,7 @@
                                                         <select class="bg-light selectpicker">
                                                                 <option>1</option>
                                                                 <option>2</option>
-                                                                <option>3</option>
+                                                                <option>300</option>
                                                         </select>
                                                     </div>
                                                     
@@ -198,157 +214,84 @@
                                                         <select class="bg-light selectpicker">
                                                                 <option>1</option>
                                                                 <option>2</option>
-                                                                <option>3</option>
+                                                                <option>300</option>
                                                         </select>
                                                     </div>
                                                 </li>
                                              </ul>
-                                            <button class="btn btn-dark">Search Book</button>
+                                            <button class="px-5 btn btn-secondary"><strong>Search Book</strong></button>
                                            
                                         </div>
                                     </nav>
                                     
                                 </div>
                       </div>
-                <!-- using a button for hotel tab -->
-                <!-- <div class="row hotel-tab">
-                    <div class="col-md-12">
-                        <button class="btn-lg bg-light rounded-0"><img src="img/hotel.svg" alt=""> <h3 class="float-right"> Hotel</h3></button>
-                    </div>
-                </div> -->
-         <!-- hotel availability navbar -->       
-                <!-- <div class="row availability-navbar">
-                        <div class="col-md-12">
-                            <nav class="navbar-availability navbar navbar-expand-lg navbar-light bg-light">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                                
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                    <ul class="navbar-nav mr-auto">
-                                        <li class="nav-item active">
-                                            <div class="form-group">
-                                                <label>Arrival</label>
-                                                <input type="text" class="form-control input-calendar" placeholder="16.07.2015">
-                                            </div>
-                                        </li>
-                                        <li class="nav-item">
-                                            <div class="form-group">
-                                                <label>Going</label>
-                                                <input type="text" class="form-control" placeholder="28.07.2016">
-                                            </div>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <div class="form-group">
-                                                <label>Rooms</label> <br>
-                                                <select class="bg-light selectpicker">
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                </select>
-                                            </div>
-                                            
-                                        </li>
-                                        <li class="nav-item">
-                                            <div class="form-group">
-                                                <label>Person</label> <br>
-                                                <select class="bg-light selectpicker">
-                                                        <option>Yes</option>
-                                                        <option>No</option>
-                                                        <option>Maybe....</option>
-                                                </select>
-                                            </div>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <div class="form-group">
-                                                <label>Child</label> <br>
-                                                <select class="bg-light selectpicker">
-                                                        <option>Yes</option>
-                                                        <option>No</option>
-                                                        <option>Sometimes :)</option>
-                                                </select>
-                                            </div>
-                                            
-                                        </li>
-                                        <li class="nav-item">
-                                            <div class="form-group">
-                                                <label>Day</label> <br>
-                                                <select class="bg-light selectpicker">
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                </select>
-                                            </div>
-                                        </li>
-                                     </ul>
-                                    <button class="btn btn-dark">Search Book</button>
-                                   
-                                </div>
-                            </nav>
-                            
-                        </div>
-    
-                    </div>  -->
-        <!-- end of availability-navbar -->
             </section>
+    <!-- end of availability navbar -->
+
+    <!-- white background section made up of mostly cards -->
             <section class="light-section">
-                    <div class="row above-about-hotel-cards" >
-                        <div class="col-md-3">
-                            <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="img/luggage.svg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h3>Amazing Travel</h3>
-                                    <p class="card-text">Nam liber tempor cum soluta nobis <br>
-                                                        eleifend option congue nihil imperdiet <br>
-                                                        doming id quod mazim.</p>
-                                    <a href="javascript:void(0)">Read More <img src="img/arrow.svg" alt=""></a>
-                                </div>
-                            </div> 
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="img/map.svg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h3>Discover</h3>
-                                    <p class="card-text">Nam liber tempor cum soluta nobis <br>
-                                        eleifend option congue nihil imperdiet <br>
-                                        doming id quod mazim.</p>
-                                    <a href="javascript:void(0)">Read More <img src="img/arrow.svg" alt=""></a>
-                                </div>
-                            </div> 
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="img/earth.svg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h3>Book Your Trip</h3>    
-                                    <p class="card-text">Nam liber tempor cum soluta nobis <br>
+                    <div class="row ml-5 above-about-hotel-cards">
+                            <div class="col-md-3">
+                                <div class="card border-0" style="width: 18rem;">
+                                    <img class="top-image card-img-top" src="img/luggage.svg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h3>Amazing Travel</h3>
+                                        <p class="card-text">Nam liber tempor cum soluta nobis <br>
+                                                            eleifend option congue nihil imperdiet <br>
+                                                            doming id quod mazim.</p>
+                                        <a href="javascript:void(0)">Read More <img class="arrow"src="img/arrow.svg" alt=""></a>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="col-md-3">
+                                <div class="border-0 card" style="width: 18rem;">
+                                    <img class="top-image card-img-top" src="img/map.svg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h3>Discover</h3>
+                                        <p class="top-image card-text">Nam liber tempor cum soluta nobis <br>
                                             eleifend option congue nihil imperdiet <br>
                                             doming id quod mazim.</p>
-                                     <a href="javascript:void(0)">Read More <img src="img/arrow.svg" alt=""></a>
-                                </div>
-                            </div> 
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="img/comments.svg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h3>Nice Support</h3>   
-                                    <p class="card-text">Nam liber tempor cum soluta nobis <br>
-                                            eleifend option congue nihil imperdiet <br>
-                                            doming id quod mazim.</p>
-                                     <a href="javascript:void(0)">Read More <img src="img/arrow.svg" alt=""></a>
-                                </div>
-                            </div> 
-                        </div>
+                                        <a href="javascript:void(0)">Read More <img class="arrow" src="img/arrow.svg" alt=""></a>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="col-md-3">
+                                <div class="border-0 card" style="width: 18rem;">
+                                    <img class="top-image card-img-top" src="img/earth.svg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h3>Book Your Trip</h3>    
+                                        <p class="card-text">Nam liber tempor cum soluta nobis <br>
+                                                eleifend option congue nihil imperdiet <br>
+                                                doming id quod mazim.</p>
+                                        <a href="javascript:void(0)">Read More <img class="arrow" src="img/arrow.svg" alt=""></a>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="col-md-3">
+                                <div class="border-0 card" style="width: 18rem;">
+                                    <img class="top-image card-img-top" src="img/comments.svg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h3>Nice Support</h3>   
+                                        <p class="card-text">Nam liber tempor cum soluta nobis <br>
+                                                eleifend option congue nihil imperdiet <br>
+                                                doming id quod mazim.</p>
+                                        <a href="javascript:void(0)">Read More <img class="arrow" src="img/arrow.svg" alt=""></a>
+                                    </div>
+                                </div> 
+                            </div>
                     </div>
-                    <div class="row">
+
+        <!-- About Hotel heading & paragraph  -->
+                    <div class="row about-hotel">
                         <div class="col-md-12">
                             <h2>About Hotel</h2>
                             <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br>
                                 labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</h4>
                         </div>
                     </div>
+                
+        <!-- about hotel cards -->
                     <div class="row">
                         <div class="col-md-4">
                             <div class="card" style="width: 18rem;">
@@ -424,12 +367,195 @@
                                     </div>
                                 </div>
                             </div>
+                    </div>
+
+        <!-- news & announcements section  -->
+
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="container">
+                            
+                                <div class="row mt-3">
+                                    <h3>News <img src="img/Steps.svg" alt=""></h3>
+                                </div>
+                                
+                                <div class="col-md-7">
+                                    <div class="row mt-3 inline"> 
+                                        <img src="img/side-date.svg" alt="">
+                                        <div class="card-body">
+                                            <h3>Nice Support</h3>   
+                                            <p class="card-text">Nam liber tempor cum soluta nobis <br>
+                                                    eleifend option congue nihil imperdiet <br>
+                                                    doming id quod mazim.</p>
+                                                <a href="javascript:void(0)">Read More <img src="img/arrow.svg" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3 inline"> 
+                                        <img src="img/side-date2.svg" alt="">
+                                        <div class="card-body">
+                                            <h3>Nice Support</h3>   
+                                            <p class="card-text">Nam liber tempor cum soluta nobis <br>
+                                                    eleifend option congue nihil imperdiet <br>
+                                                    doming id quod mazim.</p>
+                                                <a href="javascript:void(0)">Read More <img src="img/arrow.svg" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3 inline">    
+                                        <img src="img/side-date3.svg" alt="">
+                                        <div class="card-body">
+                                            <h3>Nice Support</h3>   
+                                            <p class="card-text">Nam liber tempor cum soluta nobis <br>
+                                                    eleifend option congue nihil imperdiet <br>
+                                                    doming id quod mazim.</p>
+                                                <a href="javascript:void(0)">Read More <img src="img/arrow.svg" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
+                        <div class="col-md-5"> 
+                            <div class="container">  
+                                <div class="row mt-3">
+                                    <h3>Announcements <img src="img/steps.svg" alt=""></h3>
+                                </div> 
+                                <div class="row mt-3">
+                                    <div class="card-body">
+                                        <h3>Nice Support</h3>   
+                                        <p class="card-text">Nam liber tempor cum soluta nobis <br>
+                                                eleifend option congue nihil imperdiet <br>
+                                                doming id quod mazim.</p>
+                                            <a href="javascript:void(0)">Read More <img src="img/arrow.svg" alt=""></a>
+                                    </div>
+                                </div> 
+                                <div class="row mt-3">
+                                    <div class="card-body">
+                                        <h3>Nice Support</h3>   
+                                        <p class="card-text">Nam liber tempor cum soluta nobis <br>
+                                                eleifend option congue nihil imperdiet <br>
+                                                doming id quod mazim.</p>
+                                            <a href="javascript:void(0)">Read More <img src="img/arrow.svg" alt=""></a>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="container">  
+                                <div class="row mt-3">
+                                    <div class="card-body">
+                                        <h3>Nice Support</h3>   
+                                        <p class="card-text">Nam liber tempor cum soluta nobis <br>
+                                                eleifend option congue nihil imperdiet <br>
+                                                doming id quod mazim.</p>
+                                            <a href="javascript:void(0)">Read More <img src="img/arrow.svg" alt=""></a>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+
+                    </div>
+                    <footer>
+
+                    </footer>
+
             </section>
 
-            <footer>
+            
+  
+<!--Footer-->
+            <footer class="page-footer bg-dark font-small mdb-color lighten-3 pt-4 mt-4">
 
+                <!--Footer Links-->
+                <div class="container text-center text-md-left">
+                    <div class="row my-4">
+            
+                        <!--First column-->
+                        <div class="col-md-4 col-lg-3">
+                            <h5 class="text-uppercase mb-4 font-weight-bold">Footer Content</h5>
+                            <p>Here you can use rows and columns here to organize your footer content.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident
+                                voluptate esse quasi, veritatis totam voluptas nostrum. </p>
+                        </div>
+                        <!--/.First column-->
+            
+                        <hr class="clearfix w-100 d-md-none">
+            
+                        <!--Second column-->
+                        <div class="col-md-2 col-lg-2 ml-auto">
+                            <h5 class="text-uppercase mb-4 font-weight-bold">About</h5>
+                            <ul class="list-unstyled">
+                                <p>
+                                    <a href="#!">PROJECTS</a>
+                                </p>
+                                <p>
+                                    <a href="#!">ABOUT US</a>
+                                </p>
+                                <p>
+                                    <a href="#!">BLOG</a>
+                                </p>
+                                <p>
+                                    <a href="#!">AWARDS</a>
+                                </p>
+                            </ul>
+                        </div>
+                        <!--/.Second column-->
+            
+                        <hr class="clearfix w-100 d-md-none">
+            
+                        <!--Third column-->
+                        <div class="col-md-4 col-lg-3">
+                            <h5 class="text-uppercase mb-4 font-weight-bold">Address</h5>
+                            <!--Info-->
+                            <p>
+                                <i class="fa fa-home mr-3"></i> New York, NY 10012, US</p>
+                            <p>
+                                <i class="fa fa-envelope mr-3"></i> info@example.com</p>
+                            <p>
+                                <i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
+                            <p>
+                                <i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+                        </div>
+                        <!--/.Third column-->
+            
+                        <hr class="clearfix w-100 d-md-none">
+            
+                        <!--Fourth column-->
+                        <div class="col-md-2 col-lg-2 text-center">
+                            <h5 class="text-uppercase mb-4 font-weight-bold">Follow Us</h5>
+                            <!--Social buttons-->
+                            <div class="mt-2">
+                                <!--Facebook-->
+                                <a type="button" class="btn-floating btn-small btn-fb">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <!--Twitter-->
+                                <a type="button" class="btn-floating btn-small btn-tw">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <!--Google +-->
+                                <a type="button" class="btn-floating btn-small btn-gplus">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                                <!--Dribbble-->
+                                <a type="button" class="btn-floating btn-small btn-dribbble">
+                                    <i class="fa fa-dribbble"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!--/.Fourth column-->
+            
+                    </div>
+                </div>
+                <!--/.Footer Links-->
+            
+                <!--Copyright-->
+                <div class="footer-copyright py-3 text-center bg-secondary">
+                    © 2018 Copyright:
+                    <a href="https://mdbootstrap.com/material-design-for-bootstrap/"> MDBootstrap.com </a>
+                </div>
+                <!--/.Copyright-->
+            
             </footer>
+    <!--/.Footer-->
+                          
+                      
         </div>
     </div> 
     
