@@ -12,7 +12,7 @@
     text-transform: uppercase;
     text-align: center;
     background: white;
-    letter-spacing: 50px;   
+    letter-spacing: 30px;   
 }
 
 .title p {
@@ -83,12 +83,18 @@
 .about-hotel {
     text-align: center;
 }
+.card-deck .card{
+    border: solid 10px black;
+    padding: 5%;
+    width: 40rem;
+}
+
 .weather :nth-child(2) {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 .hotel-tab button {
-    border-radius: 0;
+    border-radius: 0; 
     background-image: none;
     outline: 0;
     -webkit-box-shadow: none;
@@ -110,5 +116,52 @@ input .input-calendar [type='text'] {
 .hotel-tab {
     margin-left: 5px;
 }
-  
+.news-row {
+    word-spacing: 60rem;
+}
+.news-container {
+    display: inline;
+    
+}
+.news-content {
+    border: solid 1px gray;
+}
+.news-row {
+    text-align: center;
+}
+.announcements-row {
+    word-spacing: 30rem;
+}
+.announcements-container {
+    display: inline;
+    
+}
+.announcements-content {
+    border: solid 1px gray;
+}
+
+.products-content {
+    border: solid 1px gray;
+}
+.button-container {
+    margin-left: 10%;
+}
+.button-container img {
+    height: 0.8rem;
+}
+
+.view-all-button {
+    padding: 1rem 30rem;
+    background: none;
+    border: solid 1px gray;
+}
+.footer-container {
+    width: 120rem;
+    margin-left:10rem; 
+}
+.deco-none {
+    color: gray;
+    text-decoration: darkgray;
+  }
+
 
