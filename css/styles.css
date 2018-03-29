@@ -32,6 +32,9 @@
 .jumbotron button {
     padding: 20px 30px;
 }
+.slide-steps {
+    margin-top: 10rem;
+}
 .deal h3 {
     font-size: 60px;
 }
@@ -58,8 +61,8 @@
     padding-right:75px;
     font-size: 20px;
   }
-  .nav-link { 
-      word-spacing: 5px;
+.nav-link { 
+    word-spacing: 5px;
   }
    
 .availability-navbar > li {
