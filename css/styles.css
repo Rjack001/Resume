@@ -5,24 +5,23 @@
 
 .header-bar {
     background:rgb(49, 49, 49); 
-    font-size: 30px;
+    /* font-size: 20px; */
 }
 
 .title {
     text-transform: uppercase;
     text-align: center;
     background: white;
-    letter-spacing: 30px;   
+    letter-spacing: 20px;   
 }
 
 .title p {
-    margin-left: 38%;
+    margin-left: 30%;
 }
 
 .title img {
-    height: 50%;
-    margin-top: 2%;
-    margin-left: 30%;
+    height: 30%;
+    margin-left: 25%;
 }
 
 .jumbotron {
@@ -57,23 +56,30 @@
     margin-top: 15px;
 }
 .navbar-nav > li{
-    padding-left:75px;
-    padding-right:75px;
-    font-size: 20px;
+    padding-left:0.5rem;
+    padding-right:0.5rem;
+    
   }
 .nav-link { 
-    word-spacing: 5px;
+    word-spacing: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+  .nav-link-top {
+    width: 15rem;
+    word-spacing: 0.5rem;
+    padding: 0.5rem 1rem;  
   }
    
 .availability-navbar > li {
-    padding-left:50px;
-    padding-right:50px;
+    padding-left:1rem;
+    padding-right:1rem;
   }
 
 .social-media img {
-    height: 30px;
-    padding: 1px 10px;
+    height: 25%;
+    padding: 0% 0%;
     margin-top: 15px;
+    margin-right: 0%
     z-index: 5;
 }
 .above-about-hotel-cards .top-image {
@@ -176,5 +182,9 @@ input .input-calendar [type='text'] {
 .img-logo {
     height: 25%;
 }
-
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: red;
+    }
+}
 
