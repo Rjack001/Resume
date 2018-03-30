@@ -171,13 +171,13 @@ input .input-calendar [type='text'] {
 }
 
 .view-all-button {
-    padding: 1rem 30rem;
+    padding: 1rem 21rem;
     background: none;
     border: solid 1px gray;
 }
 .footer-container {
     width: 120rem;
-    margin-left:10rem; 
+    margin-left:1rem; 
 }
 .deco-none {
     color: gray;
