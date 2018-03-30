@@ -28,8 +28,16 @@
     background-color: rgb(49, 49, 49);
     font-family: "Open Sans";
 }
+.about-us {
+    font-family: "Georgia";
+    letter-spacing: 0.75rem;
+}
+
 .jumbotron button {
     padding: 20px 30px;
+}
+.jumbotron p {
+    font-family: "Georgia";
 }
 .slide-steps {
     margin-top: 10rem;
@@ -84,6 +92,9 @@
 }
 .above-about-hotel-cards .top-image {
     height: 50px;
+}
+.team-cards .top-image {
+    height: 15rem;
 }
 .above-about-hotel-cards {
     text-align: center;
@@ -182,6 +193,16 @@ input .input-calendar [type='text'] {
 .img-logo {
     height: 25%;
 }
+
+
+
+
+
+
+
+
+/* Media queries */
+
 @media only screen and (max-width: 600px) {
     body {
         background-color: red;
