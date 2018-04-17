@@ -1,9 +1,3 @@
-//Libary construct
-var Library = function(instanceKey){
-  this.libraryKey = instanceKey;  //to call when using localStorage
-  this.myBookArray = [];
-};
-
 //Book object constructor
 var Book = function(arg){
   this.title = arg.title;
@@ -11,6 +5,37 @@ var Book = function(arg){
   this.numberOfPages = arg.numberOfPages;
   this.publishDate = new Date(arg.publishDate);
 };
+
+(function() {
+var library_Instance;
+//Libary construct
+window.Library = function(instanceKey){
+  this.libraryKey = instanceKey;  //to call when using localStorage
+  this.myBookArray = [];
+};
+
+  if(library_Instance){
+    return library_Instance;
+  }
+  library_Instance = this;
+
+})();
+
+
+//////////////////////////////////////////////////////////////////////////////////
+var Library;
+(function(){
+  var Library_instance;
+  console.log(this);
+  Library = function (name) {
+  if(Library_instance) {
+    return Library_instance;
+  }
+  Library_instance = this;
+  this.name = name;
+};
+})();
+////////////////////////////////////////////////////////////////////////////////////
 
 //addBook to myBookArray function
 Library.prototype.addBook = function(book){
@@ -114,7 +139,7 @@ Library.prototype.getRandomAuthorName = function(){
 
 }
 
-//betterSearch
+//betterSearch byAutor & byTitle
 Library.prototype.betterSearch = function (string) {
   var matchingItems = [];
     matchingItems.push(this.getBookByTitle(string));
@@ -136,8 +161,10 @@ Library.prototype.getObject = function(instanceKey) {
 }
 
 
+
 //Lib Instance
 var gLib1 = new Library("gLib1");
+var gLib2 = new Library("gLib2");
 //Book Instances
 var gIt = new Book({title: "IT", author: "Stephen King", numberOfPages: 800, publishDate: "December 17, 1995 03:24:00"});
 var gCatcherInTheRye = new Book({title: "Catcher In The Rye", author: "JD Salinger", numberOfPages: 200, publishDate: "December 25, 1987 10:24:00"});
