@@ -1,4 +1,5 @@
 body {
   font-family: 'Cinzel', serif;
-   background-image: url("images/wall-of-books.jpg");
+   background: url("../images/wall-of-books.jpg") no-repeat;
+  
 }

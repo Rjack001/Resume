@@ -1,8 +1,17 @@
 //Libary construct
-var Library = function(instanceKey){
-  this.libraryKey = instanceKey;   // to call when using localStorage functions
-  this.myBookArray = [];
-};
+var Library;
+(function(){
+  var instance;
+  Library = function(instanceKey){
+    if (!instance) {
+      this.libraryKey = instanceKey;   // to call when using localStorage functions
+      this.myBookArray = [];
+      instance = this
+    }
+    return instance;
+  };
+})();
+
 
 //Book object constructor
 var Book = function(arg){
@@ -136,6 +145,7 @@ Library.prototype.getObject = function(instanceKey) {
 
 //Lib Instance
 var gLib1 = new Library("gLib1");
+var gLib2 = new Library("gLib2");
 
 //Book Instances
 var gIt = new Book({title: "IT", author: "Stephen King", numberOfPages: 800, publishDate: "December 17, 1995"});
