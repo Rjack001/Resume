@@ -1,5 +1,7 @@
 body {
   font-family: 'Cinzel', serif;
-   background: url("../images/wall-of-books.jpg") no-repeat;
-  
+   background: url("../images/book-compass-candle.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+
 }
