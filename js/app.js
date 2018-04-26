@@ -6,6 +6,7 @@ var Library;
     if (!instance) {
       this.libraryKey = instanceKey; // to call when using localStorage functions
       this.myBookArray = [];
+      this.d_table={};
       instance = this;
     }
     return instance;
@@ -13,14 +14,17 @@ var Library;
 })();
 /////////////////populates table with array////////////////////////////////
 $(document).ready( function () {
-  var gLib1 = new Library("gLib1");
+  window.gLib1 = new Library("gLib1");
+  gLib1.init();
   gLib1.addBooks(moreBooks);
 
   
-  $('#table_id').dataTable( {
+  gLib1.d_table = $('#table_id').dataTable( {
     data: gLib1.myBookArray,
     columns: [
-        { data: 'cover'},
+      { data: function (data, type, row){
+          return '<img src="'+ data.cover +'" class="cover">';
+         }},
         { data: 'title' },
         { data: 'author' },
         { data: 'numberOfPages' },
@@ -30,6 +34,7 @@ $(document).ready( function () {
           return '<button type="button" onclick="gLib1.removeBookByTitle(\''+ data.title +'\')" class="btn btn-primary deleteButton">Delete</button>';
         }}
     ]
+
 } );
 } );
 ////////////////////delete function/////////////////////////////////
@@ -45,22 +50,33 @@ $(document).ready( function () {
 ////////////////////init & bind events function//////////////////////////////
 Library.prototype.init = function () {
 
-  this.$alertBtn = $("button.alert");
-  this.$changeBtn = $("button.change-text");
-  this.$logBtn = $("button.log-hello");
-  this.$addToLibrary = $(".add-book-to-library");
+  // this.$alertBtn = $("button.alert");
+  // this.$changeBtn = $("button.change-text");
+  // this.$logBtn = $("button.log-hello");
+  // this.$addToLibrary = $(".add-book-to-library");
+  // this.$addBook.on("click", $.proxy(this._handleAddBookBtn, this));
 
+  this.getObject(this.libraryKey);
   this._bindEvents();
-  return false; 
+  
 };
 
 Library.prototype._bindEvents = function () {
-  this.$alertBtn.on("click", $.proxy(this._handleAlert, this));
-  this.$changeBtn.on("click", $.proxy(this._handleText, this));
-  this.$logBtn.on("click", $.proxy(this._handleLog, this));
-  this.$addToLibrary.on("click",$.proxy(this._handleAddToLibrary,this));
-  this.$addBook.on("click", $.proxy(this._handleAddBookBtn, this));
-  return false;
+  var self = this;
+  // this.$alertBtn.on("click", $.proxy(this._handleAlert, this));
+  // this.$changeBtn.on("click", $.proxy(this._handleText, this));
+  // this.$logBtn.on("click", $.proxy(this._handleLog, this));
+  // this.$addToLibrary.on("click",$.proxy(this._handleAddToLibrary,this));
+  $("#allBooks").on("click", $.proxy(this._handleAllBooksBtn, this));
+  $("#addButton").on("click", $.proxy(this._handleAddBookBtn, this));
+  this.$table=$('#table_id')
+
+  this.$table.on( 'click', 'tbody tr', function () {
+    var title =$(this).children()[1].innerText;
+    self.removeBookByTitle(title);
+    self.d_table.fnDeleteRow(this);
+} );
+  
 };
 
 Library.prototype._handleAlert = function () {
@@ -103,32 +119,62 @@ Library.prototype._handleAlert = function () {
 
 
 ///////////////////add a new book button jQ//////////////////////////////
-//one step:
-Library.prototype.initializationMethod = function(){
- this.$addBookBtn = $("#addButton");
 
- this._bindEvents();
- return false;
-};
-
-//that's another step
 Library.prototype._handleAddBookBtn = function(){
       //  var cover = $(".formCover").val();
-       var cover = "";
+      console.log("123");
+       var cover = $(".formCover").val();
        var title = $(".formTitle").val();
+       console.log(title);
+       
        var author = $(".formAuthor").val();
        var pages = $(".formPages").val();
        var date = $(".formPubDate").val();
        var button = $(".formRemoveImage").val();
-       $(".formCover, .formTitle, .formAuthor, .formPages, .formPubDate, .formRemoveImage").val("");
-       $("tbody").append("<tr><td>" + cover + "</td><td>" + title + "</td><td>" + author + "</td><td>" + pages + "</td><td>" + date + + "</td><td class='delete-button'>X</td></tr>");
+
+       var book= new Book({cover:cover, title:title , author:author , numberOfPages: pages, publishDate:date })
+
+
+       this.d_table.fnAddData( book)
+       this.d_table.fnDraw();
+       //$(".formCover, .formTitle, .formAuthor, .formPages, .formPubDate, .formRemoveImage").val("");
+      // $("tbody").append("<tr><td>" + cover + "</td><td>" + title + "</td><td>" + author + "</td><td>" + pages + "</td><td>" + date + + "</td><td class='delete-button'>X</td></tr>");
 //     $("tbody").append("<tr><td>" + title + "</td><td>" + author + "</td><td>" + pages + "</td><td>" + date + "</td><td class='delete-button'>X</td></tr>")
 
-        var book = new Book({cover:cover, title:title, author:author, numberOfPages:pages, publishDate:date,removeButtonImg:button});
+        
+         this.addBook(book);
+         if (this.addBook(book)  )
+      //check is true, execute this code
+      console.log("returned true: " + newTitle);
+      // this.setLib();
+      document.getElementById("coverInput").value = "";
+      document.getElementById("titleInput").value = "";
+      document.getElementById("authorInput").value = "";
+      document.getElementById("numPageInput").value = "";
+      document.getElementById("pubDateInput").value = "";
+};
 
-         gLib1.addBook(book);
-         };
+/////////////////////Add allBooks button///////////////////////////////////////
+Library.prototype._handleAllBooksBtn = function(){
+      //  var cover = $(".formCover").val();
+        gLib1.addBooks(moreBooks);
 
+      console.log("123");
+       var cover = $(".formCover").val();
+       var title = $(".formTitle").val();
+       console.log(title);
+       
+       var author = $(".formAuthor").val();
+       var pages = $(".formPages").val();
+       var date = $(".formPubDate").val();
+       var button = $(".formRemoveImage").val();
+
+       var book= new Book({cover:cover, title:title , author:author , numberOfPages: pages, publishDate:date })
+
+
+       this.d_table.fnAddData(book)
+       this.d_table.fnDraw();
+};
 
 /////////////////////////////////////////////////
 
@@ -159,6 +205,7 @@ Library.prototype.addBook = function(book){
     }
   }
   this.myBookArray.push(book);
+
   return true;
 }
 
@@ -269,31 +316,36 @@ Library.prototype.setObject = function(instanceKey) {
 }
 
 Library.prototype.getObject = function(instanceKey) {
-    var localBooks = JSON.parse(localStorage.getItem(instanceKey));
-    for(var i = 0; i < localBooks.length; i++) {
-      var book = localBooks[i];
-      this.addBook(new Book(book.cover, book.title, book.author, book.numberOfPages, book.publishDate));
-    }
+    this.myBookArray = JSON.parse(localStorage.getItem(instanceKey));
+    if(this.myBookArray == null){
+      this.myBookArray = new Array();
+      // this.addBooks()
+   
+    //   for(var i = 0; i < localBooks.length; i++) {
+    //   var book = localBooks[i];
+    //   this.addBook(new Book(book.cover, book.title, book.author, book.numberOfPages, book.publishDate));
+    // }
+  }
 }
 
 
 //Lib Instance
-var gLib1 = new Library("gLib1");
-var gLib2 = new Library("gLib2");
+// var gLib1 = new Library("gLib1");
+// var gLib2 = new Library("gLib2");
 
 //Book Instances
-var gIt = new Book({cover:"", title: "IT", author: "Stephen King", numberOfPages: 800, publishDate: "December 17, 1995"});
-var gCatcherInTheRye = new Book({cover:"", title: "Catcher In The Rye", author: "JD Salinger", numberOfPages: 200, publishDate: "December 25, 1987"});
-var gGoodStuff = new Book({cover:"", title: "Something Good", author: "Someone", numberOfPages: 200, publishDate: "Jan 1, 2001"});
-var gBetterStuff = new Book({cover:"", title: "Something Better", author: "Someone", numberOfPages: 201, publishDate: "Jan 2, 2001"});
-var gHuckleberryFinn = new Book ({cover:"", title: "The Adventures of Huckleberry Finn", author: "Mark Twain", numberOfPages: "500", publishDate: "December, 1884"})
-var g1984 = new Book ({cover:"", title: "Ninteen Eighty-Four", author: "George Orwell", numberOfPages: "500", publishDate: "1949"})
-var gHitchhikersGuide = new Book ({cover:"", title: "Hitchhiker's Guide to the Galaxy", author: "Douglas Adams", numberOfPages: "500", publishDate: "October 12, 1979"})
-var gRobinsonCrusoe = new Book ({cover:"", title: "Robinson Crusoe", author: "Daniel Defoe", numberOfPages: "500", publishDate: "April 25, 1719"})
-var gJourneyToTheCenterOfTheEarth = new Book ({cover:"", title: "Journey to the Center of the Earth", author: "Jules Verne", numberOfPages: "500", publishDate: "November 25, 1864"})
-var gMereChristianity = new Book ({cover:"", title: "Mere Christianity", author: "C.S. Lewis", numberOfPages: "500", publishDate: "1952"})
-var gBeowulf = new Book ({cover:"", title: "Beowulf", author: "Unknown", numberOfPages: "500", publishDate: "1000"})
-var gBandOfBrothers = new Book ({cover:"", title: "Band of Brothers", author: "Stephen E. Ambrose", numberOfPages: "336", publishDate: "1992"})
+var gIt = new Book({cover:"images/it-image.jpg", title: "IT", author: "Stephen King", numberOfPages: 800, publishDate: "December 17, 1995"});
+var gCatcherInTheRye = new Book({cover:"images/catcher-image.jpg", title: "Catcher In The Rye", author: "JD Salinger", numberOfPages: 200, publishDate: "December 25, 1987"});
+var gGoodBook = new Book({cover:"images/good-book.jpg", title: "A Good Book", author: "Someone Good", numberOfPages: 200, publishDate: "Jan 1, 2001"});
+var gGoodToGreat = new Book({cover:"images/good-great.jpg", title: "Good To Great", author: "Jim Collins", numberOfPages: 320, publishDate: "October 16, 2001"});
+var gPapillon = new Book ({cover:"images/papillon-image.jpg", title: "Papillon", author: "Henri Charriere", numberOfPages: "500", publishDate: "December, 1970"})
+var g1984 = new Book ({cover:"images/image-1984.jpg", title: "Ninteen Eighty-Four", author: "George Orwell", numberOfPages: "500", publishDate: "1949"})
+var gHitchhikersGuide = new Book ({cover:"images/hitchhikers-image.jpg", title: "Hitchhiker's Guide to the Galaxy", author: "Douglas Adams", numberOfPages: "500", publishDate: "October 12, 1979"})
+var gRobinsonCrusoe = new Book ({cover:"images/crusoe-image.jpg", title: "Robinson Crusoe", author: "Daniel Defoe", numberOfPages: "500", publishDate: "April 25, 1719"})
+var gJourneyToTheCenterOfTheEarth = new Book ({cover:"images/journey-image.jpg", title: "Journey to the Center of the Earth", author: "Jules Verne", numberOfPages: "500", publishDate: "November 25, 1864"})
+var gMereChristianity = new Book ({cover:"images/mere-image.jpg", title: "Mere Christianity", author: "C.S. Lewis", numberOfPages: "500", publishDate: "1952"})
+var gBeowulf = new Book ({cover:"images/beowulf-image.jpg", title: "Beowulf", author: "Unknown", numberOfPages: "500", publishDate: "1000"})
+var gBandOfBrothers = new Book ({cover:"images/band-bros.jpg", title: "Band of Brothers", author: "Stephen E. Ambrose", numberOfPages: "336", publishDate: "1992"})
 
 //array of addBooks
-var moreBooks = ([gIt, gGoodStuff, gBetterStuff, gCatcherInTheRye, g1984, gHitchhikersGuide, gHuckleberryFinn, gRobinsonCrusoe, gJourneyToTheCenterOfTheEarth, gMereChristianity, gBeowulf, gBandOfBrothers]);
+var moreBooks = ([gIt, gCatcherInTheRye, gGoodBook, gGoodToGreat, gPapillon, g1984, gHitchhikersGuide, gRobinsonCrusoe, gJourneyToTheCenterOfTheEarth, gMereChristianity, gBeowulf, gBandOfBrothers]);
