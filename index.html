@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Your Library</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="page-1 container-fluid">
+
+
+      <div class="row">
+        <div class="col-md-4 offset-4 mt-4">
+            <h1 class= "text-center">- Your Library -</h1>
+        </div>
+      </div>
+  
+      <!-- search-form -->
+      <div class="search-form-container form-inline">
+          <form>
+            <h1>Add a New Book</h1>
+              <div class="form-group">
+                <label for="formGroupExampleInput"></label>
+                <input type="text" class="form-control formCover" id="coverInput" placeholder="Cover">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput"></label>
+                <input type="text" class="form-control formTitle" id="titleInput" placeholder="Title">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2"></label>
+                <input type="text" class="form-control formAuthor" id="authorInput" placeholder="Author">
+              </div>
+              <div class="form-group">
+                  <label for="formGroupExampleInput"></label>
+                  <input type="text" class="form-control formPages" id="numPageInput" placeholder="Number of Pages">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2"></label>
+                  <input type="date" class="form-control formPubDate" id="pubDateInput" placeholder="Publish Date">
+                </div>
+                
+                <button id="addButton" type="button"  class="btn btn-primary submitButton">Add Book</button>
+            </form>
+      </div>
+
+
+
+      <!-- <div class="search-form-container form-inline">
+          <form>
+            <h1>Add a New Book</h1>
+              <div class="form-group">
+                <label for="formGroupExampleInput"></label>
+                <input type="text" class="form-control title book-cover" id="titleInput" placeholder="Title">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput"></label>
+                <input type="text" class="form-control title book-title" id="titleInput" placeholder="Title">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2"></label>
+                <input type="text" class="form-control book-author" id="authorInput" placeholder="Author">
+              </div>
+              <div class="form-group">
+                  <label for="formGroupExampleInput"></label>
+                  <input type="text" class="form-control book-pages" id="numPageInput" placeholder="Number of Pages">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2"></label>
+                  <input type="date" class="form-control book-date" id="pubDateInput" placeholder="Another input">
+                </div>
+
+                <button type="button" onclick="gLib1.newBook()" class="btn btn-primary submitButton add-book-to-library">Add Book</button>
+            </form>
+      </div> -->
+
+
+
+<!-- landing -->
+      <!-- <div class="landing">
+        <ul>
+          <li class="titleLanding"></li>
+          <li class="authorLanding"></li>
+          <li class="numberOfPagesLanding"></li>
+          <li class="publishDateLanding"></li>
+        </ul>
+      </div> -->
+
+      <div class="row">
+          <div class="">
+            <div class="card " style="width: 18rem;">
+              <img class="card-img-top" src="images/hitchhikers-image.jpg" alt="Card image cap">
+              <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Random Book</a>
+            </div>
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <table id="table_id" class="table-striped table-bordered extend-lg">
+              <thead>
+                  <tr>
+                      <th class="cover">Cover</th>
+                      <th class="title">Title</th>
+                      <th class="author">Author</th>
+                      <th class="number">Number of Pages</th>
+                      <th class="date">Date</th>
+                      <th class="delete">Delete</th>
+                  </tr>
+              </thead>
+
+              <tbody>
+                  <button id="allBooks" type="button" class="btn submitButton m-1 ">All Books</button>
+                  <button type="button" class="btn submitButton m-1">I'm a Button</button>
+                  <button type="button" class="btn submitButton m-1">I'm a Button</button>
+                  <button type="button" class="btn submitButton m-1">I'm a Button</button>
+                  
+              </tbody>
+
+        </table>
+      </div>
+      <div class="col-md-2"></div>
+     
+
+      
+
+
+
+    <!-- <script src="js/jquery.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <!-- copied -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.16/af-2.2.2/b-1.5.1/fh-3.1.3/r-2.2.1/sc-1.4.4/sl-1.2.5/datatables.min.css"/>
+ 
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.16/af-2.2.2/b-1.5.1/fh-3.1.3/r-2.2.1/sc-1.4.4/sl-1.2.5/datatables.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+    <!-- <script src="js/table.js"></script> -->
+
+  </body>
+</html>
