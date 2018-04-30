@@ -16,7 +16,8 @@
         </div>
       </div>
   
-      <!-- search-form -->
+      
+<!-- search-form -->
       <div class="search-form-container form-inline">
           <form>
             <h1>Add a New Book</h1>
@@ -46,59 +47,68 @@
       </div>
 
 
-
-      <!-- <div class="search-form-container form-inline">
-          <form>
-            <h1>Add a New Book</h1>
-              <div class="form-group">
-                <label for="formGroupExampleInput"></label>
-                <input type="text" class="form-control title book-cover" id="titleInput" placeholder="Title">
-              </div>
-              <div class="form-group">
-                <label for="formGroupExampleInput"></label>
-                <input type="text" class="form-control title book-title" id="titleInput" placeholder="Title">
-              </div>
-              <div class="form-group">
-                <label for="formGroupExampleInput2"></label>
-                <input type="text" class="form-control book-author" id="authorInput" placeholder="Author">
-              </div>
-              <div class="form-group">
-                  <label for="formGroupExampleInput"></label>
-                  <input type="text" class="form-control book-pages" id="numPageInput" placeholder="Number of Pages">
+<!-- Modal button -->
+      <div>
+        <div>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            All Authors
+          </button>
+        
+<!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
                 </div>
-                <div class="form-group">
-                  <label for="formGroupExampleInput2"></label>
-                  <input type="date" class="form-control book-date" id="pubDateInput" placeholder="Another input">
+                <div class="modal-body">
+                  <table class="table table-striped table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">Author</th>
+                        <th scope="col">Delete</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                <button type="button" onclick="gLib1.newBook()" class="btn btn-primary submitButton add-book-to-library">Add Book</button>
-            </form>
-      </div> -->
 
-
-
-<!-- landing -->
-      <!-- <div class="landing">
-        <ul>
-          <li class="titleLanding"></li>
-          <li class="authorLanding"></li>
-          <li class="numberOfPagesLanding"></li>
-          <li class="publishDateLanding"></li>
-        </ul>
-      </div> -->
-
+<!-- card -->
       <div class="row">
           <div class="">
             <div class="card " style="width: 18rem;">
-              <img class="card-img-top" src="images/hitchhikers-image.jpg" alt="Card image cap">
+              <img class="bookCover" src="images/hitchhikers-image.jpg" alt="Card image cap">
               <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Random Book</a>
+              <h5 class="book-title"></h5>
+              <p class="book-author"></p>
+              <p class="book-pageNum"></p>
+              <p class="book-pubDate"></p>
+
+              <button id="random-book">Random Book</button>
             </div>
           </div>
       </div>
 
+
+<!-- table -->
       <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
