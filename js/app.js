@@ -7,16 +7,15 @@ var Library;
       this.libraryKey = instanceKey; // to call when using localStorage functions
       this.myBookArray = [];
       this.d_table = {};
+      this.m_table = {};
       instance = this;
     }
     return instance;
   };
 })();
 
-////////////////////remove books by author/////////////////////////////////
-
-
 ////////////////////init & bind events function//////////////////////////////
+
 Library.prototype.init = function () {
 
   // this.$alertBtn = $("button.alert");
@@ -27,7 +26,70 @@ Library.prototype.init = function () {
   this._findElements();
   this._bindEvents();
   this.getObject(this.libraryKey);
+  this.buildTable();
+  this._getAuthors();
 
+};
+
+Library.prototype._bindEvents = function () {
+  var self = this;
+  // this.$alertBtn.on("click", $.proxy(this._handleAlert, this));
+  // this.$changeBtn.on("click", $.proxy(this._handleText, this));
+  // this.$logBtn.on("click", $.proxy(this._handleLog, this));
+  // this.$addToLibrary.on("click",$.proxy(this._handleAddToLibrary,this));
+  $("#random-book").on("click", $.proxy(this._handleRandomBookBtn, this));
+  $("#allBooks").on("click", $.proxy(this._handleAllBooksBtn, this));
+  $("#addButton").on("click", $.proxy(this._handleAddBookBtn, this));
+  $('#authorButton').on("click", $.proxy(this._handleAllAuthors, this));
+  this.$table.on("click", 'tbody button', $.proxy(this._deleteButton, this));
+  this.$mtable.on("click", 'tbody button', $.proxy(this._deleteAuthor, this));
+
+
+  // this.$mtable.on('click', 'tbody tr', function (e) {
+  //   var author = $(this).children()[0].innerText;
+  //   self.removeBookByAuthor(author);
+  //   self.m_table.fnDeleteRow(this);
+  //   self.m_table.fnDraw()
+  //   self.d_table.fnDestroy();
+  //   self.d_table = self.$table.dataTable({
+  //     data: self.myBookArray,
+  //     columns: [
+  //       {
+  //         data: function (data, type, row) {
+  //           return '<img src="' + data.cover + '" class="cover">';
+  //         }
+  //       },
+  //       { data: 'title' },
+  //       { data: 'author' },
+  //       { data: 'numberOfPages' },
+  //       { data: 'fullYear' },
+  //       {
+  //         data: function (data, type, row) {
+  //           return '<button type="button" class="btn btn-primary deleteButton">Delete</button>';
+  //         }
+  //       }
+  //     ]
+
+  //   });
+  // });
+
+  //   this.$table.on('click', 'tbody button', function (e) {
+
+  //     var title = $(this).parent().parent().children()[1].innerText;
+  //     self.removeBookByTitle(title);
+  //     self.d_table.fnDeleteRow($(this).parent().parent());
+  //   });
+
+};
+
+Library.prototype._handleAlert = function () {
+  alert("fired!");
+
+  return false;
+};
+
+//////////////////////builds table/////////////////////////////
+Library.prototype.buildTable = function () {
   this.d_table = this.$table.dataTable({
     data: this.myBookArray,
     columns: [
@@ -47,40 +109,64 @@ Library.prototype.init = function () {
       }
     ]
 
+  })
+};
+
+////////////////////// table delete button ///////////////////////
+Library.prototype._deleteButton = function (e) {
+  var row = $(e.currentTarget).parent().parent();
+  var title = row.children()[1].innerText;
+  this.removeBookByTitle(title);
+  this.d_table.fnDeleteRow(row);
+};
+
+/////////////////////// authors modal-table //////////////////////
+Library.prototype._deleteAuthor = function (e) {
+  var row = $(e.currentTarget).parent().parent();
+  var author = row.children()[0].innerText;
+  this.removeBookByAuthor(author);
+  this.m_table.fnDeleteRow(row);
+  this.m_table.fnDraw();
+  this.d_table.fnDestroy();
+  this.buildTable();
+};
+
+Library.prototype._getAuthors = function () {
+  this.m_table = this.$mtable.dataTable({
+    data: (this.getAuthors()).map(v => [v]),
+    columns: [
+      { title: 'Author' },
+      {
+        data: function (data, type, row) {
+          return '<button type="button" class="btn btn-primary deleteButton">Delete</button>';
+        }
+      }
+    ]
+
+  })
+};
+
+///////////////////// all authors //////////////////////////////////
+Library.prototype._handleAllAuthors = function () {
+
+  this.m_table.fnDestroy()
+  this.m_table = this.$mtable.dataTable({
+    data: (this.getAuthors()).map(v => [v]),
+    columns: [
+      { title: 'Author' },
+      {
+        data: function (data, type, row) {
+          return '<button type="button" class="btn btn-primary deleteButton">Delete</button>';
+        }
+      }
+    ]
+
   });
-
-};
-
-Library.prototype._bindEvents = function () {
-  var self = this;
-  // this.$alertBtn.on("click", $.proxy(this._handleAlert, this));
-  // this.$changeBtn.on("click", $.proxy(this._handleText, this));
-  // this.$logBtn.on("click", $.proxy(this._handleLog, this));
-  // this.$addToLibrary.on("click",$.proxy(this._handleAddToLibrary,this));
-  $("#random-book").on("click", $.proxy(this._handleRandomBookBtn, this));
-  $("#allBooks").on("click", $.proxy(this._handleAllBooksBtn, this));
-  $("#addButton").on("click", $.proxy(this._handleAddBookBtn, this));
-  this.$table = $('#table_id');
-
-  this.$table.on('click', 'tbody tr', function (e) {
-    var title = $(this).children()[1].innerText;
-    self.removeBookByTitle(title);
-    self.d_table.fnDeleteRow(this);
-  });
-
-};
-
-Library.prototype._handleAlert = function () {
-  alert("fired!");
-
-  return false;
-};
-/////////////////////add multiple books//////////////////////////////////
+}
 
 
 
-
-///////////////////random book (not working)///////////////////////////////
+///////////////////random book handler///////////////////////////////
 Library.prototype._handleRandomBookBtn = function () {
   var randomBook = this.getRandomBook();
   this.$randomCover.attr("src", randomBook.cover);
@@ -93,6 +179,8 @@ Library.prototype._handleRandomBookBtn = function () {
 };
 
 Library.prototype._findElements = function () {
+  this.$table = $('#table_id');
+  this.$mtable = $('#modal-table');
   this.$randomCover = $(".bookCover");
   this.$randomTitle = $(".book-title");
   this.$randomAuthor = $(".book-author");
