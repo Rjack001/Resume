@@ -18,13 +18,59 @@
       </div>
     </div>
 
+        <!-- card -->
+        <div class="row pull-right">
+          <div class="">
+            <div class="card " style="width: 18rem;">
+              <img class="bookCover" src="" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="book-title"></h5>
+                <p class="book-author"></p>
+                <p class="book-pageNum"></p>
+                <p class="book-pubDate"></p>
+    
+                <button id="random-book">Random Book</button>
+              </div>
+            </div>
+          </div>
+    
+    
+          <!-- table -->
+          <div class="row">
+            <div class=""></div>
+            <div class="">
+              <table id="table_id" class="table-striped table-bordered extend-lg">
+                <thead>
+                  <tr>
+                    <th class="cover">Cover</th>
+                    <th class="title">Title</th>
+                    <th class="author">Author</th>
+                    <th class="number">Number of Pages</th>
+                    <th class="date">Date</th>
+                    <th class="delete">Delete</th>
+                  </tr>
+                </thead>
+    
+                <tbody>
+                  <button id="_addBooks" type="button" class="btn btn-primary m-1" data-toggle="modal" data-target="#exampleModal1">
+                      Add Book/s
+                    </button>
+                  <button id="authorButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+                      All Authors
+                    </button>
+                  <button id="allBooks" type="button" class="btn submitButton m-1 ">All Books</button>
+                  
+    
+                </tbody>
+    
+              </table>
+            </div>
+            <div class="col-md-2"></div>
 
     <!-- add books Modal button !-->
     <div>
       <div>
-        <button id="_addBooks" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-          Add Book/s
-        </button>
+        
 
         <!-- add book Modal !-->
         <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -85,9 +131,7 @@
     <!-- authors Modal button -->
     <div>
       <div>
-        <button id="authorButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
-          All Authors
-        </button>
+        
 
         <!-- authors Modal -->
         <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -119,56 +163,6 @@
         </div>
       </div>
     </div>
-
-
-    <!-- card -->
-    <div class="row">
-      <div class="">
-        <div class="card " style="width: 18rem;">
-          <img class="bookCover" src="images/hitchhikers-image.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="book-title"></h5>
-            <p class="book-author"></p>
-            <p class="book-pageNum"></p>
-            <p class="book-pubDate"></p>
-
-            <button id="random-book">Random Book</button>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- table -->
-      <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-          <table id="table_id" class="table-striped table-bordered extend-lg">
-            <thead>
-              <tr>
-                <th class="cover">Cover</th>
-                <th class="title">Title</th>
-                <th class="author">Author</th>
-                <th class="number">Number of Pages</th>
-                <th class="date">Date</th>
-                <th class="delete">Delete</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <button id="allBooks" type="button" class="btn submitButton m-1 ">All Books</button>
-              <button type="button" class="btn submitButton m-1">I'm a Button</button>
-              <button type="button" class="btn submitButton m-1">I'm a Button</button>
-              <button type="button" class="btn submitButton m-1">I'm a Button</button>
-
-            </tbody>
-
-          </table>
-        </div>
-        <div class="col-md-2"></div>
-
-
-
-
 
 
         <!-- <script src="js/jquery.js"></script> -->
