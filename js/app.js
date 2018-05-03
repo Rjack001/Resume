@@ -1,3 +1,4 @@
+(function(){
 //Libary construct
 // var Library;
 
@@ -308,8 +309,8 @@ $(document).ready(function () {
 });
 
 /////// Lib Instance
-// var gLib1 = new Library("gLib1");
-// var gLib2 = new Library("gLib2");
+var gLib1 = new Library("gLib1");
+var gLib2 = new Library("gLib2");
 
 
 /////// Book Instances
@@ -331,3 +332,4 @@ var gBandOfBrothers = new Book({ cover: "images/band-bros.jpg", title: "Band of 
 ///////array of addBooks
 
 var moreBooks = ([gIt, gCatcherInTheRye, gGoodBook, gGoodToGreat, gPapillon, g1984, gHitchhikersGuide, gRobinsonCrusoe, gJourneyToTheCenterOfTheEarth, gMereChristianity, gBeowulf, gBandOfBrothers]);
+})();
