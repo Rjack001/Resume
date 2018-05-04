@@ -93,7 +93,7 @@ class Library {
         { title: 'Author' },
         {
           data: function (data, type, row) {
-            return '<button type="button" class="btn btn-primary deleteButton">Delete</button>';
+            return '<button type="button" class="btn btn-outline-danger deleteButton">Delete</button>';
           }
         }
       ]

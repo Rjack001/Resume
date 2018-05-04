@@ -29,10 +29,10 @@ th {
   margin-bottom: 10%;
 }
 
-body {
-  background-image: url("images/messy-books.jpg");
-}
 .library-title {
   font-family: 'Roboto', sans-serif;
   font-style: italic;
+}
+.modal-table {
+  margin-left: 23%;
 }
