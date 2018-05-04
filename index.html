@@ -8,132 +8,176 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body style=>
   <div class="page-1 container-fluid">
 
-
-    <div class="row">
-      <div class="col-md-4 offset-4 mt-4">
-        <h1 class="text-center">- Your Library -</h1>
-      </div>
-    </div>
-
-        <!-- card -->
-        <div class="row pull-right">
-          <div class="">
-            <div class=" " style="width: 18rem;">
-              <img class="bookCover" src="" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="book-title"></h5>
-                <p class="book-author"></p>
-                <p class="book-pageNum"></p>
-                <p class="book-pubDate"></p>
-    
-                <button id="random-book">Random Book</button>
-              </div>
+      <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <button id="_addBooks" type="button" class="btn btn-primary m-1" data-toggle="modal" data-target="#exampleModal1">
+              Add Book/s
+            </button>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#"></a>
+              </li>
+            </ul>
+            <button id="authorButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+                All Authors
+              </button>
+          </div>
+        </nav> -->
+    <!-- Title bar -->
+        <div class="card text-center bg-dark text-white">
+            <div class="card-header">
+              Welcome to
+            </div>
+            <div class="card-body">
+              <img src="images/flying-pages.jpg" class="float-left ml-3" style="width:7%;"alt="">
+              <img src="images/flying-pages.jpg" class="float-right mr-3" style="width:7%;"alt="">
+              <h1 class="card-title">~ Your Library ~</h1>
+              <p class="card-text"></p>
+              <button id="authorButton" type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal2">
+                  All Authors
+                </button>
+              <button id="_addBooks" type="button" class="btn btn-outline-light m-1" data-toggle="modal" data-target="#exampleModal1">
+                  Add Book/s
+                </button>
+              <button id="randomButton" type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal3">
+                  Random Book
+                </button>
+            </div>
+            <div class="card-footer">
+              Create your own personal list of books:
             </div>
           </div>
-    
-    
-          <!-- table -->
-          <div class="row">
-            <div class=""></div>
-            <div class="">
-              <table id="table_id" class=" col-md-7 table-striped table-dark table-hover table-bordered ">
-                <thead>
-                  <tr>
-                    <th class="cover">Cover</th>
-                    <th class="title">Title</th>
-                    <th class="author">Author</th>
-                    <th class="number">Number of Pages</th>
-                    <th class="date">Date</th>
-                    <th class="delete">Delete</th>
-                  </tr>
-                </thead>
-    
-                <tbody>
-                  <button id="_addBooks" type="button" class="btn btn-primary m-1" data-toggle="modal" data-target="#exampleModal1">
-                      Add Book/s
-                    </button>
-                  <button id="authorButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
-                      All Authors
-                    </button>
-                  <button id="allBooks" type="button" class="btn submitButton m-1 ">All Books</button>
-                  
-    
-                </tbody>
-    
-              </table>
-            </div>
-            <div class="col-md-2"></div>
+      <div style="background-image: url('images/giphy.gif'); background-size: 100%; background">
+        <div class="row">
+          <div class="col-md-4 offset-4  mt-4">
+            <h1 class="text-center library-title">GET YOUR READ ON</h1>
+          </div>
+        </div>
 
-    <!-- add books Modal button !-->
-    <div>
-      <div>
+            <!-- random book card
+            <div class="row">
+              <div class="col-md-3">
+                <div class="" style="">
+                  <img class="bookCover" style="width:70%;" src="" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="book-title"></h5>
+                    <p class="book-author"></p>
+                    <p class="book-pageNum"></p>
+                    <p class="book-pubDate"></p>
         
-
-        <!-- add book Modal !-->
-        <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add Books</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body modal-form">
-                <!-- search-form !-->
-
-
-                <h1>Add a New Book</h1>
-                <div class=" staticForm">
-                  <form>
-                    <div class="form-group">
-                      <label for="formGroupExampleInput"></label>
-                      <input type="text" class="form-control formCover" id="coverInput" placeholder="Cover">
-                    </div>
-                    <div class="form-group">
-                      <label for="formGroupExampleInput"></label>
-                      <input type="text" class="form-control formTitle" id="titleInput" placeholder="Title">
-                    </div>
-                    <div class="form-group">
-                      <label for="formGroupExampleInput2"></label>
-                      <input type="text" class="form-control formAuthor" id="authorInput" placeholder="Author">
-                    </div>
-                    <div class="form-group">
-                      <label for="formGroupExampleInput"></label>
-                      <input type="text" class="form-control formPages" id="numPageInput" placeholder="Number of Pages">
-                    </div>
-                    <div class="form-group">
-                      <label for="formGroupExampleInput2"></label>
-                      <input type="date" class="form-control formPubDate" id="pubDateInput" placeholder="Publish Date">
-                    </div>
-
-                    
-                  </form>
+                    <button id="random-book">Random Book</button>
+                  </div>
                 </div>
-                <button id="anotherBook" type="button1" class="btn btn-primary anotherBook">Add Another Book</button>
-                <button id="addButton" type="button" class="btn btn-primary submitButton">Add Book</button>
+              </div> -->
+        
+        
+              <!-- table -->
+            
+                    
+                
+                <div class="row">
+                <div class="col-md-2">
+                  </div> 
+                  <div class="col-md-8">
+                    <div class="bg-dark text-white" style="text-align: center;">
+                      <table id="table_id" class="  table-display text-center table-striped table-dark table-hover table-bordered ">
+                        <thead>
+                          <tr>
+                            <th class="cover">Cover</th>
+                            <th class="title">Title</th>
+                            <th class="author">Author</th>
+                            <th class="number p-4">Pages</th>
+                            <th class="date p-4">Date</th>
+                            <th class="delete p-4">Delete</th>
+                          </tr>
+                        </thead>
+            
+                        <tbody>
+        
+                          
+            
+                        </tbody>
+            
+                      </table>
+                    </div>
+                    <div class="col-md-2"></div>
+                  </div>
+                </div> 
+        <!-- add books Modal button !-->
+        <div>
+          <div>
+            
+
+            <!-- add book Modal !-->
+            <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Books</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body modal-form">
+                    <!-- search-form !-->
 
 
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <h1>Add a New Book</h1>
+                    <div class=" staticForm">
+                      <form>
+                        <div class="form-group">
+                          <label for="formGroupExampleInput"></label>
+                          <input type="text" class="form-control formCover" id="coverInput" placeholder="Cover">
+                        </div>
+                        <div class="form-group">
+                          <label for="formGroupExampleInput"></label>
+                          <input type="text" class="form-control formTitle" id="titleInput" placeholder="Title">
+                        </div>
+                        <div class="form-group">
+                          <label for="formGroupExampleInput2"></label>
+                          <input type="text" class="form-control formAuthor" id="authorInput" placeholder="Author">
+                        </div>
+                        <div class="form-group">
+                          <label for="formGroupExampleInput"></label>
+                          <input type="text" class="form-control formPages" id="numPageInput" placeholder="Number of Pages">
+                        </div>
+                        <div class="form-group">
+                          <label for="formGroupExampleInput2"></label>
+                          <input type="date" class="form-control formPubDate" id="pubDateInput" placeholder="Publish Date">
+                        </div>
+
+                        
+                      </form>
+                    </div>
+                    <button id="anotherBook" type="button1" class="btn btn-primary anotherBook">Add Another Book</button>
+                    <button id="addButton" type="button" class="btn btn-primary submitButton">Add Book</button>
+
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
 
-    <!-- authors Modal button -->
-    <div>
-      <div>
-        
-
-        <!-- authors Modal -->
+    <!-- authors Modal -->
         <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -161,10 +205,42 @@
             </div>
           </div>
         </div>
+          
+
+
+    <!-- random book Modal -->
+        <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">All Authors</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+        <!-- random book card -->
+                <div class="">
+                  <div class="bg-dark text-white" style="">
+                    <img class="bookCover" style="width:70%;" src="" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="book-title"></h5>
+                      <p class="book-author"></p>
+                      <p class="book-pageNum"></p>
+                      <p class="book-pubDate"></p>
+          
+                      <button id="random-book">Random Book</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-
-
         <!-- <script src="js/jquery.js"></script> -->
         <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
         <!-- copied -->

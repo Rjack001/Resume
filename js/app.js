@@ -14,7 +14,9 @@ class Library {
     }
     return instance;
   }
+
   //////////////////// init //////////////////////////////
+
   init() {
     this.$formTable = $(".staticForm form").clone();
     this._findElements();
@@ -23,7 +25,9 @@ class Library {
     this.buildTable();
     this._getAuthors();
   }
+
   ////////////////// bind events ///////////////////////
+
   _bindEvents() {
     $("#random-book").on("click", $.proxy(this._handleRandomBookBtn, this));
     $("#allBooks").on("click", $.proxy(this._handleAllBooksBtn, this));
@@ -32,13 +36,14 @@ class Library {
     $('#authorButton').on("click", $.proxy(this._handleAllAuthors, this));
     this.$table.on("click", 'tbody button', $.proxy(this._deleteButton, this));
     this.$mtable.on("click", 'tbody button', $.proxy(this._deleteAuthor, this));
-    //this.$formTable.on("click", $.proxy(this._handleAddBookBtn, this));
   }
   _handleAlert() {
     alert("fired!");
     return false;
   }
+
   //////////////////////builds table/////////////////////////////
+
   buildTable() {
     this.d_table = this.$table.dataTable({
       data: this.myBookArray,
@@ -54,20 +59,24 @@ class Library {
         { data: 'fullYear' },
         {
           data: function (data, type, row) {
-            return '<button type="button" class="btn btn-primary deleteButton">Delete</button>';
+            return '<button type="button" class="btn btn-outline-danger deleteButton">X</button>';
           }
         }
       ]
     });
   }
+
   ////////////////////// table delete button ///////////////////////
+
   _deleteButton(e) {
     var row = $(e.currentTarget).parent().parent();
     var title = row.children()[1].innerText;
     this.removeBookByTitle(title);
     this.d_table.fnDeleteRow(row);
   }
+
   /////////////////////// authors modal-table //////////////////////
+
   _deleteAuthor(e) {
     var row = $(e.currentTarget).parent().parent();
     var author = row.children()[0].innerText;
@@ -90,22 +99,9 @@ class Library {
       ]
     });
   }
-  ///////////////////// all authors //////////////////////////////////
-  // Library.prototype._handleAllAuthors = function () {
-  //   this.m_table.fnDestroy()
-  //   this.m_table = this.$mtable.dataTable({
-  //     data: (this.getAuthors()).map(v => [v]),
-  //     columns: [
-  //       { title: 'Author' },
-  //       {
-  //         data: function (data, type, row) {
-  //           return '<button type="button" class="btn btn-primary deleteButton">Delete</button>';
-  //         }
-  //       }
-  //     ]
-  //   });
-  // }
-  ///////////////////random book handler///////////////////////////////
+
+  /////////////////// random book handler ///////////////////////////////
+
   _handleRandomBookBtn() {
     var randomBook = this.getRandomBook();
     this.$randomCover.attr("src", randomBook.cover);
@@ -115,7 +111,9 @@ class Library {
     var c = randomBook.fullYear();
     this.$randomPubDate.text(randomBook.fullYear());
   }
+
   /////////////////// find elements ///////////////////////////////////
+
   _findElements() {
     this.$table = $('#table_id');
     this.$mtable = $('#modal-table');
@@ -125,7 +123,9 @@ class Library {
     this.$randomPageNum = $(".book-pageNum");
     this.$randomPubDate = $(".book-pubDate");
   }
-  ///////////////////add a new book button jQ (working)//////////////////////////////
+
+  /////////////////// add a new book button jQ //////////////////////////////
+  
   _handleAddBookBtn(e) {
     e.stopPropagation();
     var covers = $(".formCover");
@@ -148,14 +148,17 @@ class Library {
     $(".staticForm").empty();
     $(".staticForm").append(this.$formTable.clone());
   }
+
   ///////////////////// Another book button handler //////////////////////////////////
+  
   _handleAnotherBook(e) {
     e.stopPropagation();
     $(".staticForm").append(this.$formTable.clone());
   }
+
   ///////////////////// Add allBooks button (not working) ///////////////////////////////////////
+  
   _handleAllBooksBtn() {
-    //  var cover = $(".formCover").val();
     gLib1.addBooks(moreBooks);
     var cover = $(".formCover").val();
     var title = $(".formTitle").val();
@@ -169,6 +172,7 @@ class Library {
   }
   
   ///// addBook to myBookArray function
+
   addBook(book) {
     for (var i = 0; i < this.myBookArray.length; i++) {
       if (this.myBookArray[i].title.toUpperCase() === book.title.toUpperCase()) {
@@ -182,7 +186,9 @@ class Library {
     this.setObject("gLib1");
     return true;
   }
+
   /////// removeBookByTitle function
+
   removeBookByTitle(title) {
     for (var i = 0; i < this.myBookArray.length; i++) {
       if (this.myBookArray[i].title.toUpperCase() === title.toUpperCase()) {
@@ -194,7 +200,9 @@ class Library {
     }
     return false;
   }
+
   /////// removeBookByAuthor function
+  
   removeBookByAuthor(author) {
     var result = false;
     for (var i = this.myBookArray.length - 1; i >= 0; i--) {
@@ -206,14 +214,18 @@ class Library {
     }
     return result;
   }
+
   /////// getRandomBook function
+
   getRandomBook() {
     if (this.myBookArray.length == 0) {
       return null;
     }
     return this.myBookArray[Math.floor(Math.random() * this.myBookArray.length)];
   }
+
   /////// getBookByTitle(title)
+  
   getBookByTitle(title) {
     var matchingTitles = [];
     for (var i = 0; i < this.myBookArray.length; i++) {
@@ -223,7 +235,9 @@ class Library {
     }
     return matchingTitles;
   }
+
   //////// getBookByAuthor(authorName)
+  
   getBookByAuthor(authorName) {
     var matchingTitles = [];
     for (var i = 0; i < this.myBookArray.length; i++) {
@@ -233,7 +247,9 @@ class Library {
     }
     return matchingTitles;
   }
+
   //////// addBooks(books)
+  
   addBooks(books) {
     var count = 0;
     for (var i = 0; i < books.length; i++) {
@@ -243,7 +259,9 @@ class Library {
     }
     return count;
   }
+
   /////// getAuthor()
+  
   getAuthors() {
     var authorsArray = [];
     for (var i = 0; i < this.myBookArray.length; i++) {
@@ -253,21 +271,27 @@ class Library {
     }
     return authorsArray;
   }
+
   //////// getRandomAuthorName function
+  
   getRandomAuthorName() {
     if (this.myBookArray.length == 0) {
       return null;
     }
     return this.myBookArray[Math.floor(Math.random() * this.myBookArray.length)].author;
   }
+
   //////// betterSearch
+  
   betterSearch(string) {
     var matchingItems = [];
     matchingItems.push(this.getBookByTitle(string));
     matchingItems.push(this.getBookByAuthor(string));
     return matchingItems;
   }
+
   //////// localstorage
+  
   setObject(instanceKey) {
     localStorage.setItem(instanceKey, JSON.stringify(this.myBookArray));
     return instanceKey;
@@ -298,7 +322,6 @@ class Book {
 
 
 
-
 /////////////////document ready////////////////////////////////
 
 $(document).ready(function () {
@@ -308,7 +331,9 @@ $(document).ready(function () {
 
 });
 
+
 /////// Lib Instance
+
 var gLib1 = new Library("gLib1");
 var gLib2 = new Library("gLib2");
 

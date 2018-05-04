@@ -18,3 +18,21 @@ th {
 .cover {
   width: 35%;
 }
+.table-display thead {
+  font-size: 100%;
+}
+.table-display tr {
+  font-size: 150%;
+}
+.library-title {
+  font-size: 5rem;
+  margin-bottom: 10%;
+}
+
+body {
+  background-image: url("images/messy-books.jpg");
+}
+.library-title {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+}
