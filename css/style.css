@@ -5,6 +5,14 @@ body {
    background-size: cover;
 
 }
+.stars {
+  background-image: url('../images/giphy.gif'); 
+  background-size: 100%;
+}
+.table-wrap {
+  text-align: center;
+  margin: 0% 15%
+}
 
 th {
   width: 30%;
@@ -35,4 +43,7 @@ th {
 }
 .modal-table {
   margin-left: 23%;
+}
+audio {
+  background-color: black;
 }

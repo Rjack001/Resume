@@ -24,6 +24,7 @@ class Library {
     this.getObject(this.libraryKey);
     this.buildTable();
     this._getAuthors();
+    
   }
 
   ////////////////// bind events ///////////////////////
@@ -36,6 +37,7 @@ class Library {
     $('#authorButton').on("click", $.proxy(this._handleAllAuthors, this));
     this.$table.on("click", 'tbody button', $.proxy(this._deleteButton, this));
     this.$mtable.on("click", 'tbody button', $.proxy(this._deleteAuthor, this));
+    
   }
   _handleAlert() {
     alert("fired!");
@@ -45,8 +47,8 @@ class Library {
   //////////////////////builds table/////////////////////////////
 
   buildTable() {
-    this.d_table = this.$table.dataTable({
-      data: this.myBookArray,
+    this.d_table = this.$table.dataTable({ 
+      data: this.myBookArray, 
       columns: [
         {
           data: function (data, type, row) {
@@ -64,6 +66,7 @@ class Library {
         }
       ]
     });
+  
   }
 
   ////////////////////// table delete button ///////////////////////
@@ -330,6 +333,7 @@ $(document).ready(function () {
   // gLib1.addBooks(moreBooks);
 
 });
+
 
 
 /////// Lib Instance
