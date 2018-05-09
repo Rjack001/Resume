@@ -44,13 +44,13 @@ class Locations {
     returnResults(response) {
         var responseArray = "";
         for (var i = 0; i < response.results.length; i++) {
-            responseArray += "<ul class='list-group col-md-3 ml-5'>" +
-            "<li class='list' >ZIP: " + response.results[i].zip + "</li>" +
-            "<li class='list' >COUNTRY: " + response.results[i].localized_country_name + "</li>" +
-            "<li class='list' >CITY: " + response.results[i].city + "</li>" +
-            "<li class='list' >RANKING: " + response.results[i].ranking + "</li>" +
-            "<li class='list' >STATE: " + response.results[i].state + "</li>" +
-            "<li class='list mb-4' >MEMBERS: " + response.results[i].member_count + "</li></ul>";
+            responseArray += "<ul class='list-group ml-5'> " +
+            "<li class='list'><h6 class='d-inline'>ZIP:</h6> " + response.results[i].zip + "</li>" +
+            "<li class='list'><h6 class='d-inline'>COUNTRY:</h6> " + response.results[i].localized_country_name + "</li>" +
+            "<li class='list'><h6 class='d-inline'>CITY:</h6> " + response.results[i].city + "</li>" +
+            "<li class='list'><h6 class='d-inline'>RANKING:</h6> " + response.results[i].ranking + "</li>" +
+            "<li class='list'><h6 class='d-inline'>STATE:</h6> " + response.results[i].state + "</li>" +
+            "<li class='list mb-4'><h6 class='d-inline'>MEMBERS:</h6> " + response.results[i].member_count + "</li></ul>";
         }
         //console.log(responseArray);
         $("#location").empty();
@@ -59,7 +59,6 @@ class Locations {
     }
  };   
     
-
 
 
 
@@ -100,7 +99,12 @@ class Locations {
 ////////////////////// document ready //////////////////////////
 
 $(document).ready(function () {
-
     meetUp.init();
+    $("button").css("color", "blue");
+    $("body").css("background", "url('css/images/night-earth3.gif') no-repeat");
+    $("body").css("background-size", "cover");
+    $("body").css("color","red")
+    $("input").css("background-color", "gray");
+    $("input").css("color", "white");
 });
 var meetUp = new Locations();
