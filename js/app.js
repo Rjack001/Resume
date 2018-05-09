@@ -100,9 +100,8 @@ class Locations {
 
 $(document).ready(function () {
     meetUp.init();
-    $("button").css("color", "blue");
-    $("body").css("background", "url('css/images/night-earth3.gif') no-repeat");
-    $("body").css("background-size", "cover");
+    $("button").addClass("btn-outline-light");
+    $("body").css("background", "black 50% 30% url('css/images/night-earth1.gif')  no-repeat fixed");
     $("body").css("color","red")
     $("input").css("background-color", "gray");
     $("input").css("color", "white");
