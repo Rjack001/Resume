@@ -293,6 +293,14 @@ class Library {
     return matchingItems;
   }
 
+
+  ////////////// Ajax request for API to replace local storage///
+
+  Functionn getStoredBooks() {
+    var results = [];
+    let books = $.getJSON('localhost:3000/library',)
+  }
+
   //////// localstorage
   
   setObject(instanceKey) {
