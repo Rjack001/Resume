@@ -296,7 +296,7 @@ class Library {
 
   ////////////// Ajax request for API to replace local storage///
 
-  Functionn getStoredBooks() {
+  getStoredBooks() {
     var results = [];
     let books = $.getJSON('localhost:3000/library',)
   }
