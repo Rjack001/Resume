@@ -103,6 +103,12 @@
       });
     }
 
+    //////////////////// handle all authors button /////////////////////
+
+    _handleAllAuthors () {
+      this.m_table.fnDestroy();
+      this._getAuthors();
+    }
     /////////////////// random book handler ///////////////////////////////
 
     _handleRandomBookBtn() {
@@ -152,7 +158,7 @@
       $(".staticForm").append(this.$formTable.clone());
     }
 
-    ///////////////////// Another book button handler //////////////////////////////////
+    ///////////////////// Add another book - button handler //////////////////////////////////
 
     _handleAnotherBook(e) {
       e.stopPropagation();
@@ -271,6 +277,7 @@
           authorsArray.push(this.myBookArray[i].author);
         }
       }
+      console.log(authorsArray);
       return authorsArray;
     }
 
@@ -298,7 +305,6 @@
     makeRequest() {
       let _this = this;
       // let inputSearch = $("form").serialize();
-      console.log("hello");
       $.ajax({
         dataType: 'json',
         type: "GET",
@@ -319,6 +325,7 @@
     ////////////// ajax post to add book //////////////////
 
     addBookAjax(book) {
+      console.log("Im here");
       let _this = this;
       $.ajax({
         dataType: 'json',
@@ -328,11 +335,30 @@
       }).done(function (response) {
         console.log(response);
         _this.myBookArray.push(new Book(response));
+        _this.d_table.row.add(book);
       }).fail(function () {
         console.log("fail")
       })
     }
+    
+    ///////////////// Ajax delet ////////////////////////
 
+    addBookAjax(book) {
+      console.log("Im here");
+      let _this = this;
+      $.ajax({
+        dataType: 'json',
+        type: "POST",
+        url: 'http://localhost:3000/library',
+        data: book
+      }).done(function (response) {
+        console.log(response);
+        _this.myBookArray.push(new Book(response));
+        _this.d_table.row.add(book);
+      }).fail(function () {
+        console.log("fail")
+      })
+    }
 
     //////// localstorage
 
@@ -367,7 +393,7 @@
 
 
 
-    /////////////////document ready////////////////////////////////
+    ///////////////// document ready ////////////////////////////////
 
     $(document).ready(function() {
       window.gLib1 = new Library("gLib1");
