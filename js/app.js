@@ -75,7 +75,8 @@
       var row = $(e.currentTarget).parent().parent();
       var title = row.children()[1].innerText;
       this.removeBookByTitle(title);
-      this.d_table.fnDeleteRow(row);
+      this.d_table.destroy();      
+      this.buildTable();
     }
 
     /////////////////////// authors modal-table //////////////////////
@@ -200,9 +201,9 @@
     removeBookByTitle(title) {
       for (var i = 0; i < this.myBookArray.length; i++) {
         if (this.myBookArray[i].title.toUpperCase() === title.toUpperCase()) {
+          this.deleteBookAjax(this.myBookArray[i]);
           this.myBookArray.splice(i, 1);
           $('#table_id').dataTable().fnDraw();
-          this.setObject("gLib1");
           return true;
         }
       }
@@ -343,20 +344,13 @@
     
     ///////////////// Ajax delet ////////////////////////
 
-    addBookAjax(book) {
-      console.log("Im here");
+    deleteBookAjax(book) {
       let _this = this;
       $.ajax({
         dataType: 'json',
-        type: "POST",
-        url: 'http://localhost:3000/library',
-        data: book
-      }).done(function (response) {
-        console.log(response);
-        _this.myBookArray.push(new Book(response));
-        _this.d_table.row.add(book);
-      }).fail(function () {
-        console.log("fail")
+        type: "DELETE",
+        url: 'http://localhost:3000/library/' + book._id,
+        path: "/:id"
       })
     }
 
