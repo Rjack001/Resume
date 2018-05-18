@@ -59,6 +59,7 @@
           { data: 'author' },
           { data: 'numberOfPages' },
           { data: 'fullYear' },
+          { data: '_id' },
           {
             data: function (data, type, row) {
               return '<button type="button" class="btn btn-outline-danger deleteButton">X</button>';
@@ -120,6 +121,7 @@
       this.$randomPageNum.text(randomBook.numberOfPages);
       var c = randomBook.fullYear();
       this.$randomPubDate.text(randomBook.fullYear());
+      this.$randomID.text(randomBook._id);
     }
 
     /////////////////// find elements ///////////////////////////////////
@@ -132,6 +134,7 @@
       this.$randomAuthor = $(".book-author");
       this.$randomPageNum = $(".book-pageNum");
       this.$randomPubDate = $(".book-pubDate");
+      this.$randomID = $(".book-id");
     }
 
     /////////////////// add a new book button jQ //////////////////////////////
