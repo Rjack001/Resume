@@ -30,6 +30,7 @@
     ////////////////// bind events ///////////////////////
 
     _bindEvents() {
+      $("#edit").on("click", ".editButton", $.proxy(this.editHandler, this));
       $("#random-book").on("click", $.proxy(this._handleRandomBookBtn, this));
       $("#allBooks").on("click", $.proxy(this._handleAllBooksBtn, this));
       $("#addButton").on("click", $.proxy(this._handleAddBookBtn, this));
@@ -62,7 +63,18 @@
           { data: '_id' },
           {
             data: function (data, type, row) {
-              return '<button type="button" class="btn btn-outline-danger deleteButton">X</button>';
+              return ('<button type="button" class="btn btn-outline-warning mt-3 editButton">EDIT</button>'
+                
+              );
+
+            }
+          },
+          {
+            data: function (data, type, row) {
+              return (
+                '<button type="button" class="btn btn-outline-danger mt-3 deleteButton">X</button>'
+              );
+
             }
           }
         ]
@@ -76,20 +88,36 @@
       var row = $(e.currentTarget).parent().parent();
       var title = row.children()[1].innerText;
       this.removeBookByTitle(title);
-      this.d_table.destroy();      
-      this.buildTable();
+      this.d_table.row(row).remove();
+      this.d_table.draw(false);
+      // this.d_table.fnDestroy();      
+      // this.buildTable();
+
     }
 
     /////////////////////// authors modal-table //////////////////////
 
     _deleteAuthor(e) {
+      var _this = this;
       var row = $(e.currentTarget).parent().parent();
       var author = row.children()[0].innerText;
       this.removeBookByAuthor(author);
-      this.m_table.fnDeleteRow(row);
-      this.m_table.fnDraw();
-      this.d_table.fnDestroy();
-      this.buildTable();
+      // this.m_table.row(row).remove();
+      // this.m_table.draw(false);
+      var count = this.d_table.data().count();
+      let rows = this.d_table.rows(function(idx, data) {
+        console.log(data.author);
+        return (data.author === author) ? true : false;
+      })
+      rows.each(function (row) {
+        console.log(row);
+        _this.d_table.row(row).remove();
+      })
+      this.d_table.draw(false);
+
+      // this.d_table.DataTable().fnDestroy();
+      // this.makeRequest();
+      // this.buildTable();
     }
     _getAuthors() {
       this.m_table = this.$mtable.dataTable({
@@ -111,6 +139,13 @@
       this.m_table.fnDestroy();
       this._getAuthors();
     }
+
+    /////////////////// Edit handler //////////////////////////////
+
+    editHandler(e) {
+      
+    }
+
     /////////////////// random book handler ///////////////////////////////
 
     _handleRandomBookBtn() {
@@ -219,8 +254,9 @@
       var result = false;
       for (var i = this.myBookArray.length - 1; i >= 0; i--) {
         if (this.myBookArray[i].author.toUpperCase() === author.toUpperCase()) {
-          this.myBookArray.splice(i, 1);
-          $('#table_id').dataTable().fnDraw();
+          // this.myBookArray.splice(i, 1);
+          // $('#table_id').dataTable().fnDraw();
+          this.deleteBookAjax(this.myBookArray[i]);
           result = true;
         }
       }
@@ -344,7 +380,25 @@
         console.log("fail")
       })
     }
-    
+    ///////////////// Ajax put ///////////////////////////
+
+    saveChangesAjax(book) {
+      console.log("Im here");
+      let _this = this;
+      $.ajax({
+        dataType: 'json',
+        type: "PUT",
+        url: 'http://localhost:3000/library',
+        data: book
+      }).done(function (response) {
+        console.log(response);
+        _this.myBookArray.push(new Book(response));
+        _this.d_table.row.add(book);
+      }).fail(function () {
+        console.log("fail")
+      })
+    }
+
     ///////////////// Ajax delet ////////////////////////
 
     deleteBookAjax(book) {
@@ -412,6 +466,7 @@ let gLib2 = new Library("gLib2");
   var gIt = new Book({ cover: "images/it-image.jpg", title: "IT", author: "Stephen King", numberOfPages: 800, publishDate: "December 17, 1995" });
   var gCatcherInTheRye = new Book({ cover: "images/catcher-image.jpg", title: "Catcher In The Rye", author: "JD Salinger", numberOfPages: 200, publishDate: "December 25, 1987" });
   var gGoodBook = new Book({ cover: "images/good-book.jpg", title: "A Good Book", author: "Someone Good", numberOfPages: 200, publishDate: "Jan 1, 2001" });
+  var gBetterBook = new Book({ cover: "images/better.jpg", title: "A Better Book", author: "Someone Good", numberOfPages: 200, publishDate: "Jan 2, 2001" });
   var gGoodToGreat = new Book({ cover: "images/good-great.jpg", title: "Good To Great", author: "Jim Collins", numberOfPages: 320, publishDate: "October 16, 2001" });
   var gPapillon = new Book({ cover: "images/papillon-image.jpg", title: "Papillon", author: "Henri Charriere", numberOfPages: "500", publishDate: "December, 1970" })
   var g1984 = new Book({ cover: "images/image-1984.jpg", title: "Ninteen Eighty-Four", author: "George Orwell", numberOfPages: "500", publishDate: "1949" })
