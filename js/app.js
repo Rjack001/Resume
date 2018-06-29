@@ -31,10 +31,7 @@
 
     _bindEvents() {
       $("#edit").on("click", ".editButton", $.proxy(this.editHandler, this));
-      $("#random-book").on("click", $.proxy(this._handleRandomBookBtn, this));
-      $("#allBooks").on("click", $.proxy(this._handleAllBooksBtn, this));
-      $("#addButton").on("click", $.proxy(this._handleAddBookBtn, this));
-      $("#anotherBook").on("click", $.proxy(this._handleAnotherBook, this));
+      $("#table_id").on("blur", $.proxy(this.saveChangesAjax, this));
       $('#authorButton').on("click", $.proxy(this._handleAllAuthors, this));
       this.$table.on("click", 'tbody button', $.proxy(this._deleteButton, this));
       this.$mtable.on("click", 'tbody button', $.proxy(this._deleteAuthor, this));
@@ -45,7 +42,7 @@
       return false;
     }
 
-    //////////////////////builds table/////////////////////////////
+    ////////////////////// builds table /////////////////////////////
 
     buildTable() {
       this.d_table = $("#table_id").DataTable({
@@ -392,8 +389,7 @@
         data: book
       }).done(function (response) {
         console.log(response);
-        _this.myBookArray.push(new Book(response));
-        _this.d_table.row.add(book);
+       
       }).fail(function () {
         console.log("fail")
       })
