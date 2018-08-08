@@ -11,8 +11,9 @@
         this.d_table = {};
         this.m_table = {};
         instance = this;
+        this.selectedBook = {};
+        return instance;
       }
-      return instance;
     }
 
     //////////////////// init //////////////////////////////
@@ -24,27 +25,34 @@
       this._bindEvents();
       // this.getObject(this.libraryKey);
       this.buildTable();
-      this._getAuthors();
+      
     }
 
     ////////////////// bind events ///////////////////////
 
     _bindEvents() {
-      $("#edit").on("click", ".editButton", $.proxy(this.editHandler, this));
-      $("#table_id").on("blur", $.proxy(this.saveChangesAjax, this));
+      $("#table_id").on("click", ".editButton2", $.proxy(this.editHandler, this));
+      $("#saveChanges").on("click", $.proxy(this.editSaveHandler, this));
+      // $("#table_id").on("blur", $.proxy(this.saveChangesAjax, this));
       $('#authorButton').on("click", $.proxy(this._handleAllAuthors, this));
-      this.$table.on("click", 'tbody button', $.proxy(this._deleteButton, this));
+      $("#table_id").on("click", ".deleteButton", $.proxy(this._deleteButton, this));
       this.$mtable.on("click", 'tbody button', $.proxy(this._deleteAuthor, this));
+      $("#addButton").on("click", $.proxy(this._handleAddBookBtn, this));
+      $("#random-book").on("click", $.proxy(this._handleRandomBookBtn, this));
+      $(".anotherBook").on("click", $.proxy(this._handleAnotherBook, this));
+      $("#editButton2").on("click", $.proxy(this._handleAlert, this));
+
 
     }
     _handleAlert() {
-      alert("fired!");
+     console.log("fired");
       return false;
     }
 
     ////////////////////// builds table /////////////////////////////
 
     buildTable() {
+      
       this.d_table = $("#table_id").DataTable({
         data: this.myBookArray,
         columns: [
@@ -55,13 +63,12 @@
           },
           { data: 'title' },
           { data: 'author' },
-          { data: 'numberOfPages' },
+          { data: 'numberOfPages'},
           { data: 'fullYear' },
           { data: '_id' },
           {
             data: function (data, type, row) {
-              return ('<button type="button" class="btn btn-outline-warning mt-3 editButton">EDIT</button>'
-                
+              return ('<button id="editButton" type="button" class="btn btn-outline-warning mt-3 editButton2" data-toggle="modal" data-target="#editModal" >EDIT</button>'    
               );
 
             }
@@ -76,19 +83,26 @@
           }
         ]
       });
+      var self = this
+      var table = $('#table_id').DataTable();
+      $('#table_id tbody').on( 'click', 'tr', function () {
+        self.selectedRow= table.row( this ).data();
 
+      //console.log(table.row( this ).data());
+      } );
     }
+
 
     ////////////////////// table delete button ///////////////////////
 
     _deleteButton(e) {
       var row = $(e.currentTarget).parent().parent();
+      console.log("_deleteButton");
       var title = row.children()[1].innerText;
+      console.log("title:", title);
       this.removeBookByTitle(title);
       this.d_table.row(row).remove();
       this.d_table.draw(false);
-      // this.d_table.fnDestroy();      
-      // this.buildTable();
 
     }
 
@@ -99,10 +113,8 @@
       var row = $(e.currentTarget).parent().parent();
       var author = row.children()[0].innerText;
       this.removeBookByAuthor(author);
-      // this.m_table.row(row).remove();
-      // this.m_table.draw(false);
       var count = this.d_table.data().count();
-      let rows = this.d_table.rows(function(idx, data) {
+      let rows = this.d_table.rows(function(id, data) {
         console.log(data.author);
         return (data.author === author) ? true : false;
       })
@@ -112,9 +124,6 @@
       })
       this.d_table.draw(false);
 
-      // this.d_table.DataTable().fnDestroy();
-      // this.makeRequest();
-      // this.buildTable();
     }
     _getAuthors() {
       this.m_table = this.$mtable.dataTable({
@@ -133,20 +142,45 @@
     //////////////////// handle all authors button /////////////////////
 
     _handleAllAuthors () {
-      this.m_table.fnDestroy();
+      
       this._getAuthors();
     }
 
     /////////////////// Edit handler //////////////////////////////
 
     editHandler(e) {
-      
-    }
+    
+      this.selectedBook = new Book (this.selectedRow);
+      console.log('edithandler:', this.selectedBook);
+      $(".editCover").val(this.selectedBook.cover);
+      $(".editTitle").val(this.selectedBook.title);
+      $(".editAuthor").val(this.selectedBook.author);
+      // $(".editPages").val(selectedBook.numberOfPages);
+      // $(".editDate").val(selectedBook.publishdate);
+     
+     
+        
+        
+      }
+      editSaveHandler(e) {    
+        console.log($("#editCover").val());
+      //pull data from edit modal
+        var editedBook = this.selectedBook;
+        editedBook.cover = $("#editCover").val();
+        editedBook.title = $("#editTitle").val();
+        editedBook.author = $("#editAuthor").val();
+
+       //call ajax put(editedBook)
+        this.saveChangesAjax(editedBook);
+        $("#exampleModal1").modal('hide');
+      }
+    
 
     /////////////////// random book handler ///////////////////////////////
 
     _handleRandomBookBtn() {
       var randomBook = this.getRandomBook();
+      console.log("_handleRandomBook:",randomBook)
       this.$randomCover.attr("src", randomBook.cover);
       this.$randomTitle.text(randomBook.title);
       this.$randomAuthor.text(randomBook.author);
@@ -186,49 +220,55 @@
         var date = $(dates[index]).val();
         var book = new Book({ cover: cover, title: title, author: author, numberOfPages: pages, publishDate: date });
         // debugger
-        this.d_table.fnAddData(book);
         this.addBook(book);
+        console.log(book);
+        
       }
-      this.d_table.fnDraw();
+      this.d_table.draw();
       $(".staticForm").empty();
-      $(".staticForm").append(this.$formTable.clone());
+      $("#exampleModal1").modal('hide');
+      // $(".staticForm").append(this.$formTable.clone());
     }
+
 
     ///////////////////// Add another book - button handler //////////////////////////////////
 
     _handleAnotherBook(e) {
       e.stopPropagation();
+      console.log("anotherBook");
       $(".staticForm").append(this.$formTable.clone());
     }
 
     ///////////////////// Add allBooks button (not working) ///////////////////////////////////////
 
-    _handleAllBooksBtn() {
-      gLib1.addBooks(moreBooks);
-      var cover = $(".formCover").val();
-      var title = $(".formTitle").val();
-      var author = $(".formAuthor").val();
-      var pages = $(".formPages").val();
-      var date = $(".formPubDate").val();
-      var button = $(".formRemoveImage").val();
-      var book = new Book({ cover: cover, title: title, author: author, numberOfPages: pages, publishDate: date });
-      this.d_table.fnAddData(book);
-      this.d_table.fnDraw();
-    }
+    // _handleAllBooksBtn() {
+    //   gLib1.addBooks(moreBooks);
+    //   var cover = $(".formCover").val();
+    //   var title = $(".formTitle").val();
+    //   var author = $(".formAuthor").val();
+    //   var pages = $(".formPages").val();
+    //   var date = $(".formPubDate").val();
+    //   var button = $(".formRemoveImage").val();
+    //   var book = new Book({ cover: cover, title: title, author: author, numberOfPages: pages, publishDate: date });
+    //   this.d_table.fnAddData(book);
+    //   this.d_table.fnDraw();
+    // }
 
     ///// addBook to myBookArray function
-
-    addBook(book) {
+    
+    addBook(book, callbackFunction) {
       for (var i = 0; i < this.myBookArray.length; i++) {
+        console.log(book);
+        console.log(this.myBookArray[i].title.toUpperCase(),book.title.toUpperCase());
         if (this.myBookArray[i].title.toUpperCase() === book.title.toUpperCase()) {
+          alert("Duplicate book");
+          $("#exampleModal1").modal("hide");
           return false;
         }
       }
-      this.myBookArray.push(book);
-      if (this.$table.api) {
-        this.$table.dataTable().fnDraw();
-      }
-      this.addBookAjax();
+      this.addBookAjax(book);
+      return true;
+      
     }
 
     /////// removeBookByTitle function
@@ -251,8 +291,6 @@
       var result = false;
       for (var i = this.myBookArray.length - 1; i >= 0; i--) {
         if (this.myBookArray[i].author.toUpperCase() === author.toUpperCase()) {
-          // this.myBookArray.splice(i, 1);
-          // $('#table_id').dataTable().fnDraw();
           this.deleteBookAjax(this.myBookArray[i]);
           result = true;
         }
@@ -341,18 +379,21 @@
 
     makeRequest() {
       let _this = this;
-      // let inputSearch = $("form").serialize();
       $.ajax({
         dataType: 'json',
         type: "GET",
         url: 'http://localhost:3000/library'
       }).done(function (response) {
-        console.log(response);
+        console.log("response:", response);
         for (let i = 0; i < response.length; i++) {
           let book = new Book(response[i]);
           _this.myBookArray.push(book);
+          console.log(book);
+          console.log("_this.myBookArray:", _this.myBookArray);
           _this.d_table.row.add(book);
+          
         }
+        
         _this.d_table.draw();
       }).fail(function () {
         console.log("fail")
@@ -370,26 +411,33 @@
         url: 'http://localhost:3000/library',
         data: book
       }).done(function (response) {
-        console.log(response);
-        _this.myBookArray.push(new Book(response));
-        _this.d_table.row.add(book);
+        console.log("addBookAjaxResponse:",response);
+        var bookToAdd = new Book(response);
+        _this.myBookArray.push(bookToAdd);
+        console.log("addBookAjax-bookToAdd:", bookToAdd);
+        _this.d_table.row.add(bookToAdd);
+        _this.d_table.draw();
       }).fail(function () {
         console.log("fail")
       })
     }
     ///////////////// Ajax put ///////////////////////////
 
-    saveChangesAjax(book) {
-      console.log("Im here");
+    saveChangesAjax(editedBook) {
+      console.log("Im here",editedBook);
       let _this = this;
       $.ajax({
         dataType: 'json',
         type: "PUT",
-        url: 'http://localhost:3000/library',
-        data: book
+        url: 'http://localhost:3000/library/' + editedBook._id,
+        data: editedBook
       }).done(function (response) {
-        console.log(response);
-       
+        console.log("addBookAjaxResponse:",response);
+        var bookToAdd = new Book(response);
+        _this.myBookArray.push(bookToAdd);
+        console.log("addBookAjax-bookToAdd:", bookToAdd);
+        _this.d_table.row.add(bookToAdd);
+        _this.d_table.draw();
       }).fail(function () {
         console.log("fail")
       })
@@ -404,6 +452,11 @@
         type: "DELETE",
         url: 'http://localhost:3000/library/' + book._id,
         path: "/:id"
+      }).done(function(response){
+        console.log(response);
+
+      }).fail(function (response) {
+        console.log(response);
       })
     }
 
@@ -431,6 +484,7 @@
         this.author = arg.author;
         this.numberOfPages = arg.numberOfPages;
         this.publishDate = new Date(arg.publishDate);
+        console.log("new book", arg);
       }
       fullYear() {
         return this.publishDate.getFullYear();
