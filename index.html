@@ -1,330 +1,264 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    
-    <title>Week 2 Exercise</title>
+  <meta charset="utf-8">
+  <title>Your Library</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <div class="wrapper">
-        <section class="kissingSection">
-            <div class="unityNav">
-                <h1>UNITY</h1>
-                <nav class="topMenuBar">
-                    <ul>
-                        <li >
-                            <a href="#Home">HOME</a>
-                        </li>
-                        <li>
-                            <a href="#About us">ABOUT US</a>
-                        </li>
-                        <li>
-                            <a href="#services">SERVICES</a>
-                        </li>
-                        <li>
-                            <a href="#portfolio">PORTFOLIO</a> 
-                        </li>
-                        <li>
-                            <a href="#blog">BLOG</a>
-                        </li>
-                        <li>
-                            <a href="#shop">SHOP</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            
-            <img class="phoneLine" src="Images/prototype.psd_0002s_0001_Rectangle-43.png" alt="">
-            <img class="yellowCircle" src="Images/prototype.psd_0002s_0000s_0001_Ellipse-4.png" alt="">
-            <img class="phone" src="Images/prototype.psd_0002s_0000s_0000_Vector-Smart-Object.png" alt="">  
-           
-            <ul class="sideMenu">
-                <li >
-                    <a href="#facebook">FACEBOOK</a>
-                </li>
-                <li>
-                    <a href="#twitter">TWITTER</a>
-                </li>
-                <li>
-                    <a href="#instagram">INSTAGRAM</a>
-                </li>
-                <li>
-                    <a href="#youTube">YOUTUBE</a> 
-                </li>
-            </ul>
-          
-            
-            <h1 class="honor">HONOR THE DETAILS.</h1>
-            <h3 class="weBring">WE BRING YOUR PRODUCTS OR SERICES ACROSS IN WAYS <br> 
-                THAT MAKE PEOPLE FEEL GOOD AS THEY ENGAGE WITH YOUR BUSINESS</h3>
-            <img class="scrollSquare" src="Images/prototype.psd_0007s_0002_Rectangle-42-copy-2.png" alt="">
-            <h4 class="scroll">SCROLL</h4>
-            <img class="arrowDown" src="Images/prototype.psd_0007s_0001_Vector-Smart-Object.png" alt="">
-            <p class="sideCopyright">COPYRIGHT 2016. UNITY TEMPLATE</p>
-        </section>
-           
-                <div class="bigSquare1"></div>
-        
-        <section class="purpleSection">
-            <h1 class="o1">01.</h1>
-            
-            <h1 class="invites">INVITES <br> ACTIVE ATTENTION</h1>
-            <h3 class="thatsWhy">THATS WHY WE INVENT AND BUILD DIGITAL CAMPAIGNS</h3>
-            <h1 class="complexity">Complexity <br> should be <br> secret</h1>
-            <p class="weKnow">We know you have a story to tell. You want the world to embrace your <br> 
-                incredible ideas, products, and services. Trouble is, you're not sure about the <br> 
-                best way to get your message across. No problem. We do.</p>
-            <img class="brushBox" src="Images/prototype.psd_0001s_0000_brush-box.png" alt="">
-            <img class="brushBoxShadow" src="Images/brushboxShadow.png" alt="">
-         
-            <div class="handmadeContainer">
-                <img class="handMadeImage"src="Images/12.png" alt="">
-                <h3 class="handmade">HANDMADE LAYOUTS</h3>
-                <img class="handmadeLine"src="Images/prototype.psd_0001s_0000s_0001s_0000_Rectangle-38.png" alt="">
-                <p>Curabitur sit amet suscipit sagittis est. Ut<br>
-                   acet nisi porttitor vestibulum. Donec a<br>
-                   loareet mi, at pretium lectus.</p>
-            </div>
 
-            <div class="creativeContainer">
-                <img class="graduationCap" src="Images/mortarboard.png" alt="">
-                <h3 class="creative">CREATIVE DESIGNS</h3>
-                <img class="creativeLine" src="Images/prototype.psd_0001s_0000s_0001s_0000_Rectangle-38.png" alt="">
-                <p>Curabitur sit amet suscipit sagittis est. Ut<br>
-                    acet nisi porttitor vestibulum. Donec a<br>
-                    loareet mi, at pretium lectus.</p>
-            </div>
+<body style=>
+  <div class="page-1 container-fluid">
+    <audio src="images/bg-music.mp3" controls></audio>
+<!-- Header/action bar -->
+    <div class="card text-center bg-dark text-white">
+        <div class="card-header">
+          Welcome to
+        </div>
+        <div class="card-body">
+          <img src="images/flying-pages.jpg" class="float-left ml-3" style="width:7%;"alt="">
+          <img src="images/flying-pages.jpg" class="float-right mr-3" style="width:7%;"alt="">
+          <h1 class="card-title">~ Your Library ~</h1>
+          <p class="card-text mt-4">Create your own personal list of books:</p>
+        </div>
+        <div class="card-footer">
+          <button id="authorButton" type="button" class="btn btn-outline-light mr-5" data-toggle="modal" data-target="#exampleModal2">
+              All Authors
+            </button>
+          <button id="_addBooks" type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal1">
+              Add Book/s
+            </button>
+          <button id="randomButton" type="button" class="btn btn-outline-light ml-5" data-toggle="modal" data-target="#exampleModal3">
+              Random Book
+            </button>
 
-            <div class="supportContainer">
-                <img class="tools" src="Images/tools.png" alt="">
-                <h3 class="support">100% SUPPORT</h3>
-                <img class="supportLine" src="Images/prototype.psd_0001s_0000s_0001s_0000_Rectangle-38.png" alt="">
-                <p>Curabitur sit amet suscipit sagittis est. Ut<br>
-                    acet nisi porttitor vestibulum. Donec a<br>                        
-                    loareet mi, at pretium lectus.</p>
-            </div>
-            <div class="bottomDashes">
-                <img class="yellowDash" src="Images/prototype.psd_0001s_0000s_0001s_0000s_0001_Rounded-Rectangle-2.png" alt="">
-                <img class="whiteDash1" src="Images/prototype.psd_0005s_0003s_0000_Rounded-Rectangle-2-copy-2.png" alt="">
-                <img class="whiteDash2" src="Images/prototype.psd_0005s_0003s_0000_Rounded-Rectangle-2-copy-2.png" alt="">
-            </img>
-            </section>
-
-        <section class="buildingSky">
-            <img class="weAreUnity" src="Images/prototype.psd_0008s_0001_We-are-unity.png" alt="">
-            <h1>WE LOVE OUR CLIENTS</h1>
-            <P>We take pride in delivering Intelligent Designs and Engaging Experiences for <br>
-            clients all over the World.</P>
-            <div class="circle1"></div>
-            <div class="circle2"></div>
-            <div class="circle3"></div>
-            <img class="playButton" src="Images/prototype.psd_0008s_0003_Vector-Smart-Object.png" alt="">
-        </section>
-
-        <section class="buildingSection">
-                <div class="bigSquare2"></div>
-        </section>
-
-        <section class="whiteSection">
-            <img class="pencilBasket" src="Images/prototype.psd_0000s_0002_pen-box.png" alt="">
-            <img class="pencilBasketShadow"src="Images/shadow.png" alt="">
-            <img class="blackPencil" src="Images/prototype.psd_0000s_0000s_0002_Pencil-2.png" alt="">
-            <img class="blackPencilShadow" src="Images/prototype.psd_0000s_0000s_0003_Shadow.png" alt="">
-            <img class="yellowPencil" src="Images/prototype.psd_0000s_0000s_0000_Pencil-1.png" alt="">
-            <img class="yellowPencilShadow" src="Images/prototype.psd_0000s_0000s_0001_Shadow.png" alt="">
-            <div class="honorTheDetails">
-                <h1>honor </h1>
-                <h1>the details</h1>
-                <h3>for the global servic design network</h3>
-            </div>
-                <h1 class="o2">02.</h1>
-            <div class="bigSquare3"></div>
-            <img class="flowerGuy" src="Images/prototype.psd_0004s_0002s_0004_Layer-17.png" alt="">
-            <img class="prevArrow" src="Images/prototype.psd_0004s_0002s_0001_Vector-Smart-Object.png" alt="">
-            <h3 class="prev_next">prev next</h3>
-            <img class="nextArrow" src="Images/prototype.psd_0004s_0002s_0000_Vector-Smart-Object-copy.png" alt="">
-            <div class="whatWeDoBox">
-                <img class="purpleBox" src="Images/prototype.psd_0004s_0001s_0003_Rectangle-42.png" alt="">
-                <img class="xCircle" src="Images/prototype.psd_0004s_0001s_0002_Vector-Smart-Object.png" alt="">
-                <h1>WHAT WE DO</h1>
-                <p>Although BLOC occupies a rebel position within their <br>
-                    market of opertations, their rebel nature was insufficiently <br>
-                    manifest in their existing online presence.</p>            
-            </div>
-            <table class="iconTable">
-                <tr>
-                    <td><img class="headphones" src="Images/prototype.psd_0004s_0000s_0003_Vector-Smart-Object.png" alt=""></td>
-                    <td>campaign creative</td>
-                    <td><img class="openBox" src="Images/prototype.psd_0004s_0000s_0007_Vector-Smart-Object.png" alt=""></td>
-                    <td class="photo">photography</td>
-                </tr>
-                <tr class="middleRow">
-                    <td><img class="cupcake" src="Images/prototype.psd_0004s_0000s_0002_Vector-Smart-Object.png" alt=""></td>
-                    <td>copywriting</td>
-                    <td><img class="scales" src="Images/prototype.psd_0004s_0000s_0006_Vector-Smart-Object.png" alt=""></td>
-                    <td class="post">3d/vfx/post</td>
-                </tr>
-                <tr>
-                    <td><img class="moveArrow" src="Images/prototype.psd_0004s_0000s_0001_Vector-Smart-Object.png" alt=""></td>
-                    <td>product design</td>
-                    <td><img class="graph" src="Images/prototype.psd_0004s_0000s_0006_Vector-Smart-Object.png" alt=""></td>
-                    <td class="digital">digital outdoor</td>
-                </tr>
-            </table>
-            <img class="o3" src="Images/prototype.psd_0004s_0002s_0003_03..png" alt=""> </img>
-        </section>
-        
-        <section class="snowSection">
-            <div class="global">
-                <h1>GLOBAL COMPANY WITH A LOCAL FEEL.</h1>
-                <p>WE HELP FORWARD-THINKING CLIENTS SUCCEED IN DIGITAL CULTURE
-                                    WITH WORK THAT INVITES ACTIVE ATTENTION.</p>
-            </div>
-            <img class="verticalBlackLine" src="Images/prototype.psd_0005s_0000s_0000_Rectangle-45.png" alt="">
-            <p class="whatOur">What our Customers are saying</p>
-            
-            <img class="person1rectangle" src="Images/prototype.psd_0005s_0001s_0002s_0004_Rectangle-4-copy-6.png" alt="">
-            
-            <!-- <table class="customerFeedBack">
-                <tr class="photos">
-                    <td><img class="person1image" src="Images/prototype.psd_0005s_0001s_0002s_0001_Layer-40.png" alt=""></td>
-                    <td><img class="person2image" src="Images/prototype.psd_0005s_0001s_0001s_0001_Layer-42.png" alt=""></td>
-                    <td><img class="person3image" src="Images/prototype.psd_0005s_0001s_0000s_0001_Layer-43.png" alt=""></td>
-                </tr>
-                <tr class="stars">
-                    <td><img class="person1stars" src="Images/prototype.psd_0005s_0001s_0000s_0000_.png" alt=""></td>
-                    <td><img class="person2stars" src="Images/prototype.psd_0005s_0001s_0001s_0000_.png" alt=""></td>
-                    <td><img class="person3stars" src="Images/prototype.psd_0005s_0001s_0000s_0000_.png" alt=""></td>
-                </tr>
-                <tr class="quotes">
-                    <td><q class="person1article">Thanks so much for the awesome 
-                            customer service. So many companies,
-                            large and small, have a lot to learn from
-                            you. Great job!</q>
-                    </td>
-                    <td><q class="person2article">A great agency who are not only
-                            flexible, efficient and professional but a
-                            group of people who really care about
-                            delivering results for you.</q>
-                    </td>
-                    <td><q class="person3article">The quality of product and more
-                            importantly, customer service provided
-                            means we keep coming back for more!</q>
-                    </td>
-                </tr>
-                <tr class="names">
-                    <td><p>GREGORY BRADLEY</p>
-                    </td>
-                    <td><p>JONATHAN DRAUS</p>
-                    </td>
-                    <td><p>CAROLINE DE SMET</p>
-                    </td>
-                </tr>
-                <tr class="locations">
-                    <td><P>NEWYORK - USA</P>
-                    </td>
-                    <td><P>BERLIN - GERMANY</P> 
-                    </td>
-                    <td><P>BRUSSELS - BELGIUM</P>  
-                    </td>
-                </tr>             
-            </table> -->
-            
-            <div class="person1">
-                    <img class="person1image" src="Images/prototype.psd_0005s_0001s_0002s_0001_Layer-40.png" alt="">
-                    <img class="person1stars" src="Images/prototype.psd_0005s_0001s_0000s_0000_.png" alt="">
-                    <q class="person1article">Thanks so much for the awesome 
-                                            customer service. So many companies,
-                                            large and small, have a lot to learn from
-                                            you. Great job!</q>
-                    <p class="name1">gregory bradley</p>
-                    <P class="location1">newyork usa</P>
-            </div> -->
-           
-            <img class="person2rectangle" src="Images/prototype.psd_0005s_0001s_0001s_0004_Rectangle-4-copy-6.png" alt="">
-            <div class="person2">   
-                    <img class="person2image" src="Images/prototype.psd_0005s_0001s_0001s_0001_Layer-42.png" alt="">
-                    <img class="person2stars" src="Images/prototype.psd_0005s_0001s_0001s_0000_.png" alt="">
-                    <q class="person2article">A great agency who are not only
-                        flexible, efficient and professional but a
-                        group of people who really care about
-                        delivering results for you.</q>
-                    <p class="name2">JONATHAN DRAUS</p>
-                    <P class="location2">BERLIN - GERMANY</P> 
-            </div>            
-            
-            <img class="person3rectangle" src="Images/prototype.psd_0005s_0001s_0000s_0004_Rectangle-4-copy-6.png" alt="">
-            <div class="person3">
-                    <img class="person3image" src="Images/prototype.psd_0005s_0001s_0000s_0001_Layer-43.png" alt="">
-                    <img class="person3stars" src="Images/prototype.psd_0005s_0001s_0000s_0000_.png" alt="">
-                    <q class="person3article">The quality of product and more
-                        importantly, customer service provided
-                        means we keep coming back for more!</q>
-                    <p class="name3">CAROLINE DE SMET</p>
-                    <P class="location3">BRUSSELS - BELGIUM</P>  
-            </div>
-       
-
-        </section>
-        <div class="moreSnow"></div>
-        <footer class="footerSection">
-            <img class="phoneImage" src="Images/phone image.png" alt="">
-            <span class="phoneNumber">CALL NOW: 0800 456 789</span>
-            <h1 class="unity2">UNITY</h1>
-            <span class="email">MAIL: <a href=>INFO@UNITY.COM</a></span>
-            <img class="envelope" src="Images/envelope.png">
-          <div class="aboutUsContainer"> 
-                <span class="aboutUs">ABOUT US</span>
-                <img class="girlOnline" src="Images/prototype.psd_0006s_0006s_0001_274604_l_srgb_s_gl.png" alt="">
-                <article class="aboutUsArticle">Lorem Ipsum is simply dummy text of the printing and 
-                                                typesetting industry. Lorem Ipsum has been the industry's
-                                                standard dummy text ever since the 1500s, when an unknown
-                                                printer took a gallery of type and scrambled it to make</article>
-                <!-- <img class="facebookCircle" src="Images/prototype.psd_0006s_0001s_0005_social_facebook_circle.png" alt="">
-                <img class="photoCircle" src="Images/prototype.psd_0006s_0001s_0004_social_instagram_circle.png" alt="">
-                <img class="inCircle" src="Images/prototype.psd_0006s_0001s_0003_social_linkedin_circle.png" alt="">
-                <img class="g+Circle" src="Images/prototype.psd_0006s_0001s_0002_social_googleplus_circle.png" alt="">
-                <img class="twitterCircle" src="Images/prototype.psd_0006s_0001s_0001_social_twitter_circle.png" alt="">
-                <img class="ballCircle" src="Images/prototype.psd_0006s_0001s_0000_social_dribbble_circle.png" alt=""> -->
-                <img class="socialMedia" src="Images/socialMedia.png" alt="">
-          </div>
-          <div class="newsletterContainer">
-                <span class="newsletter">NEWSLETTER</span>
-                <p class="newsletterP">Signup for our weekly newsletter
-                    and get the latest updates</p>
-                <p class="emailInput">Enter your Email</p>
-                <p class="subscribe">Subscribe</p>
-          </div>
-          <div class="fromBlogContainer">
-              <table class="fromBlog">
-                  <tr>
-                      <th class="blogHead">FROM BLOG</th>
-                  </tr>
-                <tr>
-                    <td><img class="literature" src="Images/prototype.psd_0006s_0000s_0006_Layer-71-copy.png" alt=""></td>
-                    <td> <p>Needed a redesign of their site </p><p class="date">Dec 25th 2011</p></td>
-                </tr>  
-                <tr>
-                    <td><img class="guyWalking" src="Images/prototype.psd_0006s_0000s_0000_Layer-67-copy.png" alt=""></td>
-                    <td><p>Maximise conversions and let</p><p class="date">Dec 25th 2011</p></td>
-                </tr>
-                <tr>
-                    <td><img class="skyscraper" src="Images/prototype.psd_0006s_0000s_0001_Layer-70-copy.png" alt=""></td>
-                    <td><p>Arts For India's mission is underprivileg</p><p class="date">Dec 25th 2011</p></td>
-                </tr>
-              </table>
-                
-          </div>
-
-        </footer>
-
+        </div>
     </div>
+
+<!-- background image wrap -->
+    <div class="stars">
+      <div class="row">
+        <div class="col-md-4 offset-4  mt-4">
+          <h1 class="text-center library-title">EXPAND YOUR MIND</h1>
+        </div>
+      </div>
+      
+<!-- table -->
+        <!-- <div class="col-md-8 "> -->
+            <div  class="table-wrap  text-white">
+              <table id="table_id"  class="table table-striped table-dark table-hover table-bordered ">
+                <thead>
+                  <tr id="_tr" class= >
+                    <th class="cover p-4">Cover</th>
+                    <th class="title p-4">Title</th>
+                    <th class="author p-4">Author</th>
+                    <th class="number p-4">Pages</th>
+                    <th class="date p-4">Date</th>
+                    <th class="id p-4">ID</th>
+                    <th class="edit p-4">Edit</th>
+                    <th class="delete p-4">Delete</th>
+                  </tr>
+                </thead>
     
+                <tbody class="align-middle">
+
+                  
+    
+                </tbody>
+    
+              </table>
+            </div>
+          <!-- </div> -->
+        <div class="col-md-2">
+        </div> 
+      </div> 
+    
+      <!-- Edit book Modal !-->
+      <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Edit Book</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body modal-form">
+          
+          <!-- search-form -->
+             <h1>Edit Book</h1>
+              <div class=" staticForm">
+                <form>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput"></label>
+                    <input type="text" class="form-control editCover" id="editCover" placeholder="Cover">
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput"></label>
+                    <input type="text" class="form-control editTitle" id="editTitle" placeholder="Title">
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput2"></label>
+                    <input type="text" class="form-control editAuthor" id="editAuthor" placeholder="Author">
+                  </div>
+                  <!-- <div class="form-group">
+                    <label for="formGroupExampleInput"></label>
+                    <input type="text" class="form-control editPages" id="editPages" placeholder="Number of Pages">
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput2"></label>
+                    <input type="date" class="form-control editPubDate" id="editPubDate" placeholder="Publish Date">
+                  </div> -->
+
+                  
+                </form>
+              </div>
+              <button id="saveChanges" type="button1" class="btn btn-outline-light saveChanges">Save Changes</button> 
+              
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- add book Modal !-->
+      <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add Books</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body modal-form">
+          
+          <!-- search-form -->
+              <h1>Add a New Book</h1>
+              <div class=" staticForm">
+                <form>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput"></label>
+                    <input type="text" class="form-control formCover" id="coverInput" placeholder="Cover">
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput"></label>
+                    <input type="text" class="form-control formTitle" id="titleInput" placeholder="Title">
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput2"></label>
+                    <input type="text" class="form-control formAuthor" id="authorInput" placeholder="Author">
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput"></label>
+                    <input type="text" class="form-control formPages" id="numPageInput" placeholder="Number of Pages">
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput2"></label>
+                    <input type="date" class="form-control formPubDate" id="pubDateInput" placeholder="Publish Date">
+                  </div>
+
+                  
+                </form>
+              </div>
+              <button id="anotherBook" type="button1" class="btn btn-outline-light anotherBook">Add Another Book</button>
+              <button id="addButton" type="button" class="btn btn-outline-light submitButton">Add Book</button>
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- authors Modal -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark text-white text-center">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">All Authors</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body text-center">
+                <table id="modal-table" class="table modal-table table-striped table-dark">
+                  <thead>
+                    <tr>
+                      <th scope="">Author</th>
+                      <th scope="">Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+          
+
+
+    <!-- random book Modal -->
+        <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Get A Random Book</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+        <!-- random book card -->
+                <div class="">
+                  <div class="bg-dark text-white">
+                    <img class="bookCover" style="width:70%;" src="" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="book-title"></h5>
+                      <p class="book-author"></p>
+                      <p class="book-pageNum"></p>
+                      <p class="book-pubDate"></p>
+                      <p class="book-id"></p>
+          
+                      <button id="random-book" class="btn btn-outline-light">Random Book</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"></script>
+
+        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <script src="js/app.js" charset="utf-8"></script>
+
 </body>
+
 </html>
