@@ -1,0 +1,59 @@
+<svg id="Gellery" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="123" viewBox="0 0 160 123">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        opacity: 0.9;
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        font-size: 15px;
+        font-family: "Open Sans";
+      }
+    </style>
+    <filter id="filter" x="0" y="0" width="160" height="123" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="0" y="0" width="160" height="123" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjEyMyIgdmlld0JveD0iMCAwIDE2MCAxMjMiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50KTsKICAgICAgfQogICAgPC9zdHlsZT4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50IiB4MT0iMjYuNTM5IiB4Mj0iMTMzLjQ2MSIgeTI9IjEyMyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9Ii0wLjI1IiBzdG9wLWNvbG9yPSIjOTE5MTkxIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMS4yNSIgc3RvcC1jb2xvcj0iIzM1MzUzNSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjEyMyIvPgo8L3N2Zz4K"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect class="cls-1" width="160" height="123"/>
+  <path id="Şekil_1_kopya" data-name="Şekil 1 kopya" class="cls-2" d="M1458,439.858a4.25,4.25,0,1,1-4.25-4.287,4.267,4.267,0,0,1,4.25,4.287h0Zm22.67,15.713s-1.89-8.571-7.56-8.571-7.55,5.717-11.33,5.717-3.78-1.433-7.55-1.433c-3.79,0-7.56,4.287-7.56,4.287h34Zm8.5-22.857H1492V467h-2.83V432.714Zm-42.5,31.429H1492V467h-45.33v-2.857Zm39.66-2.857V427H1441v34.286h45.33Zm-42.5-31.429h39.67v28.572h-39.67V429.857Z" transform="translate(-1386 -371)"/>
+  <text id="Gallery" class="cls-3" x="16.687" y="27.813">Gallery</text>
+</svg>

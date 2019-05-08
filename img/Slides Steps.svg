@@ -1,0 +1,89 @@
+<svg id="Slides_Steps" data-name="Slides Steps" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="113" height="15" viewBox="0 0 113 15">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill-opacity: 0;
+        stroke: #fff;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        filter: url(#filter-2);
+      }
+
+      .cls-4, .cls-5 {
+        fill-rule: evenodd;
+      }
+
+      .cls-4 {
+        filter: url(#filter-3);
+      }
+
+      .cls-5 {
+        filter: url(#filter-4);
+      }
+    </style>
+    <filter id="filter" x="0" y="3.156" width="8.625" height="8.688" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="52.344" y="3.156" width="8.625" height="8.688" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-3" x="453.844" y="612.156" width="8.656" height="8.688" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-4" x="480.375" y="612.156" width="8.625" height="8.688" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <circle id="_01" data-name="01" class="cls-1" cx="4.313" cy="7.5" r="4.313"/>
+  <circle id="_02" data-name="02" class="cls-2" cx="30.891" cy="7.5" r="6.453"/>
+  <circle id="_03" data-name="03" class="cls-3" cx="56.656" cy="7.5" r="4.313"/>
+  <path id="_04" data-name="04" class="cls-4" d="M458.171,620.855a4.355,4.355,0,1,0-4.317-4.355A4.336,4.336,0,0,0,458.171,620.855Z" transform="translate(-376 -609)"/>
+  <path id="_05" data-name="05" class="cls-5" d="M484.694,620.855a4.355,4.355,0,1,0-4.316-4.355A4.336,4.336,0,0,0,484.694,620.855Z" transform="translate(-376 -609)"/>
+</svg>
